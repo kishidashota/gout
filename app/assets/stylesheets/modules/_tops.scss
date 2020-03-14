@@ -1,4 +1,4 @@
-* {
+
   .header{
     width: 100vw;
     height: 100px;
@@ -132,7 +132,7 @@
         }
       }
     }
-    &__hum{
+    &__hum{      
       #ham-menu {
         a{
           color: ivory;
@@ -165,7 +165,7 @@
           border-radius: 0 0 0 10px;
       
           /*左下角丸*/
-          color: #fff;
+          color: yellow;
       
           /*アイコン（フォント）色*/
           content: "≡";
@@ -228,8 +228,102 @@
     }
   }
   .main{
+    z-index:0;
+    overflow: hidden;
+    background-color:white;
+    height: 100vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    
+    &__title{
+      width: 100%;
+      font-size: 40px;
+      font-weight: bold;
+      text-align:center;
+      margin-top: 20px;
+      color:#111111;
+
+      &__select-box{
+      margin-right: 30px;
+      font-size: 15px;
+     
+      }
+    }
+
+    &__contents{
+      color: #151515;
+      display: flex;
+      
+ 
+      &__list{
+        width: 220px;
+        display: inline-block;
+        margin-left: 80px;
+        margin-top: 20px;
+        display: flex;
+        background-color:white;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+        a{
+          text-decoration: none;
+          color: black;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+        }
+        .post{  
+          width: 220px;
+          height: 200px;
+          border: solid solid #151515;
+          border-width: 1px;
+          box-shadow:0px 0px 10px;
+          margin-right:50px ;
+          .post__image{
+          background-color: #fff;
+  
+          }
+          .post__content{
+          .food{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          &__content{
+            background-color: white;
+            color: #333;
+            padding: 16px;
+
+          }
+          }
+        }
+      }
+    }
+    
 
 
 
   }
-}
+  .exhibition{
+    width: 70px;
+    height: 70px;
+    background: yellow;
+    text-align: center;
+    border-radius: 50%;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    padding: 15px;
+    &__text{
+      color:black;
+      display: block;
+      font-size: 13px;
+      text-decoration: none;
+      font-family: 'Inconsolata', monospace;
+    }
+    a{
+      color: black;
+      
+    }
+    &__icon{
+      margin-top: 5px;
+    }
+  }
