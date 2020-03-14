@@ -1,0 +1,28 @@
+.header
+  .header__logo
+    =link_to "#" do
+      Gout
+  .header__search
+    .container
+      %input{:placeholder => "Search...", :type => "text"}/
+      .search
+  .header__hum
+    #ham-menu
+      %ul
+        =link_to "#" do
+          = icon('fas','beer')
+          %li My profile 画像と名前も表示
+        =link_to "#" do  
+          = icon('fas','address-card')      
+          %li brand＿search
+        =link_to "#" do
+          = icon('fas','sign-out-alt')
+          %li logout
+
+    #menu-background
+
+
+
+
+
+
