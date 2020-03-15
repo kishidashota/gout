@@ -1,0 +1,66 @@
+.main
+  .main__title
+    All posts
+    .main__title__select-box
+      %select{:name => "example"}
+        %option Narrow down
+        %option{:value => "選択肢1"} ASAHI
+        %option{:value => "選択肢2"} KIRIN
+        %option{:value => "選択肢3"} SUNTRY
+        %option{:value => "選択肢4"} SAPPORO
+        %option{:value => "選択肢5"} ORION
+
+ 
+  .main__contents
+    .main__contents__list
+      .posts
+        =link_to post_path(:id) do
+          .posts__image
+            = image_tag 'gyoza.jpeg',size:'220x150'
+          .posts__content
+            .posts__content__name
+              王将の餃子
+            %ul.food
+              %li
+                コジコジ
+              %li
+                %i.fa.fa-star.likeIcon 7
+
+      .posts
+        =link_to post_path(:id) do
+          .posts__image
+            = image_tag 'gyoza.jpeg',size:'220x150'
+          .posts__content
+            .posts__content__name
+              王将の餃子
+            %ul.food
+              %li
+                コジコジ
+              %li
+                %i.fa.fa-star.likeIcon 7
+      .posts
+        =link_to post_path(:id) do
+          .posts__image
+            = image_tag 'gyoza.jpeg',size:'220x150'
+          .posts__content
+            .posts__content__name
+              王将の餃子
+            %ul.food
+              %li
+                コジコジ
+              %li
+                %i.fa.fa-star.likeIcon 7
+      .posts
+        =link_to post_path(:id) do
+          .posts__image
+            = image_tag 'gyoza.jpeg',size:'220x150'
+          .posts__content
+            .posts__content__name
+              王将の餃子
+            %ul.food
+              %li
+                コジコジ
+              %li
+                %i.fa.fa-star.likeIcon 7
+
+  
