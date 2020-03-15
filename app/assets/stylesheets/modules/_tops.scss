@@ -7,7 +7,7 @@
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       margin-left: 30px;
       line-height: 100px;
-      font-size: 40px;;
+      font-size: 40px;
       a{
         color:yellow;
         text-decoration: none;
@@ -233,8 +233,6 @@
     background-color:white;
     height: 100vh;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-    
     &__title{
       width: 100%;
       font-size: 40px;
@@ -270,18 +268,18 @@
           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
         }
-        .post{  
+        .posts{  
           width: 220px;
           height: 200px;
           border: solid solid #151515;
           border-width: 1px;
           box-shadow:0px 0px 10px;
           margin-right:50px ;
-          .post__image{
+          .posts__image{
           background-color: #fff;
   
           }
-          .post__content{
+          .posts__content{
           .food{
             display: flex;
             align-items: center;

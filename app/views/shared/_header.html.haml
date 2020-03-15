@@ -1,6 +1,6 @@
 .header
   .header__logo
-    =link_to "#" do
+    =link_to root_path do
       Gout
   .header__search
     .container
@@ -8,22 +8,24 @@
       .search
   .header__hum
     #ham-menu
+
+    
       %ul
-        =link_to "#" do
+      - if user_signed_in?
+        = link_to "#" do
           = icon('fas','beer')
           %li My profile 画像と名前も表示
-        =link_to "#" do
+        =link_to user_path(current_user) do
           = icon('fas','newspaper')
           %li 投稿一覧
-        =link_to "#" do  
-          = icon('fas','address-card')      
-          %li brand＿search
-        =link_to "#" do
+        =link_to "destroy_user_session_path", method: :delete do
           = icon('fas','sign-out-alt')
           %li logout
-
+      - else
+        = link_to "ログイン", new_user_session_path
+        = link_to "新規登録", new_user_registration_path
+    
     #menu-background
-
 
 
 
