@@ -18,9 +18,9 @@
         =link_to user_path(current_user) do
           = icon('fas','newspaper')
           %li 投稿一覧
-        =link_to "destroy_user_session_path", method: :delete do
+        = link_to  destroy_user_session_path, method: :delete do
           = icon('fas','sign-out-alt')
-          %li logout
+          %li Logout
       - else
         = link_to "ログイン", new_user_session_path
         = link_to "新規登録", new_user_registration_path
