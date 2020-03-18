@@ -22,16 +22,26 @@
         = @post.description
     .post__content__detail--adress
     .post__content__partition
-
     .reviews
-  .input
-    .input__stars
-      .star-rating-front{:style => "width: 50%"} ★★★★★
-      .star-rating-back ★★★★★
-    .input__contents
-      %textarea{:cols => "30", :name => "comment", :rows => "5",placeholder:"Try review!!",class:"input__contents--form"}
-      %p
-        %input{:type => "submit", :value => "Send",class:"btn"}/
+      .comments
+        %h4 ＜コメント一覧＞
+        - if @comments
+          - @comments.each do |comment|
+            %p
+              %strong
+                = link_to comment.user.user_name, "/users/#{comment.user_id}"
+                ：
+              = comment.content
+    .input
+      .input__contents
+      - if current_user
+        = form_with(model: [@post, @comment], local: true) do |form|
+          = form.text_area :content, placeholder: "Let's try comments", rows: "2",class:"input__contents--form"
+          = form.submit "SEND",class:"btn"
+      - else
+        %strong
+          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
 
 
 
