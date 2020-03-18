@@ -1,3 +1,30 @@
 = render "shared/header"
 = render "shared/main"
+.main
+  .main__title
+    All posts
+    .main__title__select-box
+      %select{:name => "example"}
+        %option Narrow down
+        %option{:value => "選択肢1"} ASAHI
+        %option{:value => "選択肢2"} KIRIN
+        %option{:value => "選択肢3"} SUNTRY
+        %option{:value => "選択肢4"} SAPPORO
+        %option{:value => "選択肢5"} ORION
+  .partition
+  .main__contents
+    .main__contents__list 
+      .posts
+        - @post.each do |o|
+          =link_to post_path(o) do
+            .posts__image
+              = image_tag o.food_image.url,size:'220x150'
+            .posts__content
+              .postt__content__name
+                =o.shop_name
+              %ul.food
+                %li
+                  = o.user.user_name
+                  %li
+                    %i.fa.fa-star.likeIcon 7
 = render "shared/newpost"
