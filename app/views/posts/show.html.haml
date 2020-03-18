@@ -23,6 +23,45 @@
     .post__content__detail--adress
     .post__content__partition
 
-    = render "reviews/show"
-  = render "reviews/new"
+    .reviews
+  .input
+    .input__stars
+      .star-rating-front{:style => "width: 50%"} ★★★★★
+      .star-rating-back ★★★★★
+    .input__contents
+      %textarea{:cols => "30", :name => "comment", :rows => "5",placeholder:"Try review!!",class:"input__contents--form"}
+      %p
+        %input{:type => "submit", :value => "Send",class:"btn"}/
+
+  .other-reviews
+  .review-results
+  .review-results__title
+    .icon
+      .img
+      .name
+        conributer
+    .time
+      07/17 07:17
+    .input__stars
+      .star-rating-front{:style => "width: 50%"} ★★★★★
+      .star-rating-back ★★★★★
+  .partition
+  .review-results__contents
+    まうまいんじゃないだろうか。おおおおおおおおおおおお
+.review-results
+  .review-results__title
+    .icon
+      .img
+      .name
+        conributer
+    .time
+      07/17 07:17
+    .input__stars
+      .star-rating-front{:style => "width: 50%"} ★★★★★
+      .star-rating-back ★★★★★
+  .partition
+  .review-results__contents
+    まずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずいまずい
+
+
 
