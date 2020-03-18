@@ -279,15 +279,18 @@
           display: flex;
           width: 220px;
           height: 200px;
-          border: solid solid #151515;
+          border: solid #151515;
           border-width: 1px;
           box-shadow:0px 0px 10px;
           margin-right:50px ;
+          border-radius: 10px;
           .posts__image{
-          background-color: #fff;
-  
+            .image{
+          border-radius: 10px;
+            }
           }
           .posts__content{
+            margin-left: 10px;
           .food{
             display: flex;
             align-items: center;

@@ -18,7 +18,7 @@
         - @post.each do |o|
           =link_to post_path(o) do
             .posts__image
-              = image_tag o.food_image.url,size:'220x150'
+              = image_tag o.food_image.url,size:'200x200',class:"image"
             .posts__content
               .postt__content__name
                 =o.shop_name
