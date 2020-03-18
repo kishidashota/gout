@@ -31,11 +31,8 @@ ActiveRecord::Schema.define(version: 2020_03_16_101137) do
     t.string "shop_name", null: false
     t.text "description", null: false
     t.string "address", null: false
-    t.string "food_image", null: false
-    t.string "assortment", null: false
+    t.string "food_image"
     t.integer "user_id"
-    t.float "latitude"
-    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -4,49 +4,40 @@
     .post__content__title
       new post
     .post__content__recommend
-      %form{:action => "example.cgi", :method => "post"}
-        %br
-        %br
-        %br
-        %p
-          Brand：
-          %input{:name => "name", :type => "text",class:"input-default"}/
+      = form_with model: @post, class: :form, local: true do |form|
         %br
         %br
         %br
         %br
+        Shop name：
+        = form.text_field :shop_name, placeholder: :お店の名前, class: "input-default"
+        %br
+        %br
+        %br
+        %br
+        Food image：
+        = form.file_field :food_image
+        %br
+        %br
+        %br
+        %br
+        Description：
+        = form.text_area :description, placeholder: :メニュー説明, class: "text-area"
+        %br
+        %br
+        %br
+        %br
+        Adress：   
+        = form.text_area :address, placeholder: :住所, class: "text-area"
+        %br
+        %br
+        = form.submit 'form', class:"send__btn"
+
+
+ 
       
-        %p
-          Shop name：
-          %input{:name => "email", :type => "text",class:"input-default"}/
-        %br
-        %br
-        %br
-        %br
+ 
         
-        %p
-          Food img：
-          %input{:name => "email", :type => "text",class:"input-default"}/
-        %br
-        %br
-        %br
-        %br
-        %br
-        %p
-          Description：
-          %input{:name => "email", :type => "text",class:"input-default"}/
-        %br
-        %br
-        %br
-        %br
-        %p
-          Adress：
-          %input{:name => "email", :type => "text",class:"input-default"}/
-        %br
-        %br
-        %br
-        %p
-          %input{:type => "submit", :value => "Send",class:"send__btn"}/
         
 
 

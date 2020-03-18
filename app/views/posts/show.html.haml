@@ -2,22 +2,27 @@
 .post
   .post__content
     .post__content__title
-      Shop_Name
+      = @post.shop_name
     .post__content__recommend
     .post__content__partition
     .post__content__detail
       .post__content__detail--contributor
         .icon
-          .img
-          .name
-            conributer
+          =link_to post_path(@post.id) do
+            .img
+              = image_tag @post.user.user_image.url,size:'30x30',class:"img"
+            .name
+              = @post.user.user_name
         .brands
-          Asahi
-      .post__content__detail--post
-        .img
-        .description
-      .post__content__detail--adress
+          Asahi SAPPORO
+    .post__content__detail--post
+      .img
+        = image_tag @post.food_image.url,size:'480x300'
+      .description
+        = @post.description
+    .post__content__detail--adress
     .post__content__partition
+
     = render "reviews/show"
-= render "reviews/new"
+  = render "reviews/new"
 

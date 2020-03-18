@@ -13,43 +13,50 @@
     &__detail{
       width: 80%;
       height: 85%;
-      background-color: yellowgreen;
+      
       margin: 0 auto;
       &--contributor{
-        margin-left: 300px;
+        
         display: flex;
         .icon{
+          margin-left: 10px;
           .img{
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background-color: red;
-          margin-left: 15px;
+          margin: 0 auto;
           }
           .name{
+            margin: 0 auto;
+            text-align: center;
           }
           
+        }
+        a{
+          text-decoration: none;
+          color: red;
         }
         .brands{
           margin-left: 50px;
           font-size: 40px;
+          
         }
       }
       &--post{
         display: flex;
         .img{
           margin-top: 30px;
-          margin-left: 5px;
+          margin-left: 20px;
           width: 45%;
           height: 300px;
           background-color: white;
         }
         .description{
           margin-top: 30px;
-          margin-left: 80px;
+          margin-left: 60px;
           width: 45%;
           height: 300px;
-          background-color:black;
+          background-color:wheat;
         }
       }
       &--adress{
