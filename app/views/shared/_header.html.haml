@@ -8,19 +8,20 @@
       .search
   .header__hum
     #ham-menu
-
-    
       %ul
       - if user_signed_in?
         = link_to "#" do
-          = icon('fas','beer')
-          %li My profile 画像と名前も表示
+          = image_tag current_user.user_image.url,size:'30x30',class:"img"
+          .name
+            = current_user.user_name
+          %li My profile 自分の投稿も表示
         =link_to user_path(current_user) do
           = icon('fas','newspaper')
-          %li 投稿一覧
+          %li いいね一覧
         = link_to  destroy_user_session_path, method: :delete do
           = icon('fas','sign-out-alt')
           %li Logout
+
       - else
         = link_to "ログイン", new_user_session_path
         = link_to "新規登録", new_user_registration_path
