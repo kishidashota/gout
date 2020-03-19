@@ -21,10 +21,17 @@
       .description
         = @post.description
     .post__content__detail--adress
-    .post__content__partition
-    .reviews
+  .reviews
+    .input
+      - if current_user
+        = form_with(model: [@post, @comment], local: true, class: "input__contents",id: "new_comment") do |form|
+          = form.text_area :content, placeholder: "Let's try comments", rows: "2",class: "textbox"
+          = form.submit "SEND",class: "form__submit"
+      - else
+        .text
+          ※ コメントの投稿には新規登録/ログインが必要です ※
+      .partition
       .comments
-        %h4 ＜コメント一覧＞
         - if @comments
           - @comments.each do |comment|
             %p
@@ -32,15 +39,6 @@
                 = link_to comment.user.user_name, "/users/#{comment.user_id}"
                 ：
               = comment.content
-    .input
-      .input__contents
-      - if current_user
-        = form_with(model: [@post, @comment], local: true) do |form|
-          = form.text_area :content, placeholder: "Let's try comments", rows: "2",class:"input__contents--form"
-          = form.submit "SEND",class:"btn"
-      - else
-        %strong
-          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
 
 
