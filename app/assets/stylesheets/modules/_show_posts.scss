@@ -1,6 +1,8 @@
 .post{
   margin-top: 50px;
+
   &__content{
+    
     &__partition{
     border-bottom: solid 3px #000;
     font-size: 2.5rem;
@@ -12,7 +14,7 @@
     }
     &__detail{
       width: 80%;
-      height: 85%;
+      height: auto;
       
       margin: 0 auto;
       &--contributor{
@@ -65,6 +67,7 @@
         background-color: coral;
         margin: 0 auto;
         margin-top: 50px;
+        margin-bottom: 59px;
       }
     }
   }
