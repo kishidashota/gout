@@ -31,6 +31,22 @@
         = form.text_area :address, placeholder: :住所, class: "text-area"
         %br
         %br
+        Assortment：
+        Asahi
+        = form.check_box  :assortment, {multiple: true}, 'Asahi', nil
+        KIRIN
+        = form.check_box  :assortment, {multiple: true}, 'KIRIN', nil
+        SAPPORO
+        = form.check_box  :assortment, {multiple: true}, 'SAPPORO', nil
+        sunToRY
+        = form.check_box  :assortment, {multiple: true}, 'sunToRY', nil
+        YEBISU
+        = form.check_box  :assortment, {multiple: true}, 'YEBISU', nil
+        Others
+        = form.check_box  :assortment, {multiple: true}, 'Others', nil
+
+    
+
         = form.submit 'form', class:"send__btn"
 
 

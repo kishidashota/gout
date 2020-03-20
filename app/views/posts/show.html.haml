@@ -19,7 +19,7 @@
                 = @post.user.user_name
 
         .brands
-          Asahi SAPPORO
+          = @post.assortment
     .post__content__detail--post
       .img
         = image_tag @post.food_image.url,size:'480x300'
