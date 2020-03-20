@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "tops#index"
-  resources :posts, only: [:new,:create,:show] do
+  resources :posts, only: [ :new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: :create
   end
   devise_scope :user do

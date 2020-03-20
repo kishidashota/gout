@@ -1,0 +1,34 @@
+= render "shared/header"
+.post
+  .post__content
+    .post__content__title
+      edit post
+    .post__content__recommend
+      = form_with model: @post, class: :form, local: true do |form|
+        %br
+        %br
+        %br
+        %br
+        Shop name：
+        = form.text_field :shop_name, placeholder: :お店の名前, class: "input-default"
+        %br
+        %br
+        %br
+        %br
+        Food image：
+        = form.file_field :food_image
+        %br
+        %br
+        %br
+        %br
+        Description：
+        = form.text_area :description, placeholder: :メニュー説明, class: "text-area"
+        %br
+        %br
+        %br
+        %br
+        Adress：   
+        = form.text_area :address, placeholder: :住所, class: "text-area"
+        %br
+        %br
+        = form.submit 'form', class:"send__btn"
