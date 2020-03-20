@@ -6,9 +6,26 @@
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
         = render "devise/shared/error_messages", resource: resource
         .field
+          = f.label :user_name
+          %br/
+          = f.text_field :user_name,class:"input-default"
+          %br/
+        .field
           = f.label :email
           %br/
           = f.email_field :email, autofocus: true, autocomplete: "email",class:"input-default"
+        .field
+          = f.label :user_image
+          %br/
+          = f.file_field :user_image
+          %br/
+          %br/
+        .field
+          = f.label :"love_brand"
+          %br/
+          = f.select :love_brand, [["Asahi", "1"], ["KIRIN", "2"], ["SAPPORO", "3"], ["sunToRY", "4"], ["YEBISU", "5"],["クラフトビール", "6"]]
+          %br/
+          %br/
         - if devise_mapping.confirmable? && resource.pending_reconfirmation?
           %div
             Currently waiting confirmation for: #{resource.unconfirmed_email}
