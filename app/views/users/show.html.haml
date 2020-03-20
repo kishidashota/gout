@@ -1,0 +1,41 @@
+= render "shared/header"
+.personal
+  .personal__profile
+    .contents
+      .main_img
+        = image_tag @user.user_image.url,size:'200x200',class:"main_img"
+      .main_name
+        = @user.user_name
+    .edition
+    = link_to edit_user_registration_path do
+      = icon('fas','cogs')
+
+
+  .partition
+
+  .personal__title
+    = @user.user_name
+    's post
+    
+  .personal__contents
+    .personal__contents__list 
+      .posts
+        - @posts.each do |o|
+          =link_to post_path(o) do
+            .posts__image
+              = image_tag o.food_image.url,size:'200x200',class:"image"
+            .posts__content
+              .postt__content__name
+                =o.shop_name
+              %ul.food
+                %li
+                  = o.user.user_name
+                  %li
+                    %i.fa.fa-star.likeIcon 7
+
+
+    .personal__title__select-box
+
+
+
+  

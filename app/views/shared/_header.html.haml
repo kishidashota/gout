@@ -10,12 +10,13 @@
     #ham-menu
       %ul
       - if user_signed_in?
-        = link_to "#" do
+        =link_to user_path(current_user) do
           = image_tag current_user.user_image.url,size:'30x30',class:"img"
           .name
-            = current_user.user_name
+            = link_to user_path(current_user.id) do
+              = current_user.user_name
           %li My profile 自分の投稿も表示
-        =link_to user_path(current_user) do
+        =link_to "#" do
           = icon('fas','newspaper')
           %li いいね一覧
         = link_to  destroy_user_session_path, method: :delete do

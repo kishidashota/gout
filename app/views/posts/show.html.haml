@@ -1,5 +1,8 @@
 = render "shared/header"
 .post
+  - if user_signed_in? && current_user.id == @post.user_id
+    = link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete"
+    = link_to "編集", edit_post_path(@post.id), class: "postManage__edit"
   .post__content
     .post__content__title
       = @post.shop_name
@@ -12,7 +15,9 @@
             .img
               = image_tag @post.user.user_image.url,size:'30x30',class:"img"
             .name
-              = @post.user.user_name
+              = link_to user_path(@post.user) do
+                = @post.user.user_name
+
         .brands
           Asahi SAPPORO
     .post__content__detail--post
@@ -38,7 +43,7 @@
               %strong
                 = link_to comment.user.user_name, "/users/#{comment.user_id}"
                 ：
-              = comment.content
+                = comment.content
 
 
 
