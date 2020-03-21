@@ -30,6 +30,14 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
   def post_params
     params.require(:post).permit(:shop_name, :description,:address,:food_image,assortment:[]).merge(user_id: current_user.id)

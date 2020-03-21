@@ -1,0 +1,27 @@
+.header
+  .header__logo
+    =link_to root_path do
+      Gout
+.main
+  .header__search
+    .container
+      = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
+        = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+        = button_tag type: 'submit' ,class: 'search_btn' do
+          = icon 'fas','search',class: 'search-icon'
+  .main__contents
+    .main__contents__list 
+      .posts
+        - @posts.each do |o|
+          =link_to post_path(o) do
+            .posts__image
+              = image_tag o.food_image.url,size:'200x200',class:"image"
+            .posts__content
+              .postt__content__name
+                =o.shop_name
+              %ul.food
+                %li
+                  = o.user.user_name
+                  %li
+                    %i.fa.fa-star.likeIcon 7
+    
