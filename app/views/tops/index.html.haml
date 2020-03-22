@@ -17,14 +17,13 @@
       .posts
         - @post.each do |o|
           =link_to post_path(o) do
-            .posts__image
-              = image_tag o.food_image.url,size:'200x200',class:"image"
+            = image_tag o.food_image.url,size:'200x200',class:"image"
             .posts__content
               .postt__content__name
                 =o.shop_name
-              %ul.food
-                %li
+              .icon
+                .img
+                  = image_tag o.user.user_image.url,size:'30x30',class:"img"
+                .name
                   = o.user.user_name
-                  %li
-                    %i.fa.fa-star.likeIcon 7
 = render "shared/newpost"

@@ -8,18 +8,38 @@
 
   &__profile{
     display: flex;
-    margin-left: 80px;
     padding-top: 30px;
+    margin-left: 530px;
+
     .contents{
-    .main_img{
+    .main_image{
       border-radius: 50%;
+      width: 220px;
+      height: 220px;
       border: 1px solid #000000;
+      
+      
     }
     .main_name{
-      width: 200px;
+      margin-left:90px ;
 
     }
   }
+  }
+  .edition{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 200px;
+    line-height: 30px;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 10px;   
+    a{
+      color: #151515;
+      text-decoration: none;
+    }
+    
   }
   &__title{
     width: 100%;
@@ -31,13 +51,67 @@
 
   }
   .partition{
-    border-bottom: solid 1px #000;
+    border-bottom: 1px solid#dee2e6!important;
     font-size: 2.5rem;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     margin-top: 0px;
 
   }
+  /*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: rgb(255, 252, 247);
+  width: 100vw;
+  margin: 0 auto;}
+  
+  /*タブのスタイル*/
+  .tab_item {
+  width: calc(100%/2);
+  height: 50px;
+  border-bottom: 1px solid rgba(255, 187, 0, 0.925);
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+  opacity: 0.75;
+  }
+  
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+  display: none;
+  }
+  
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+  }
+  
+  
+  /*選択されているタブのコンテンツのみを表示*/
+  #all:checked ~ #all_content,
+  #programming:checked ~ #programming_content,
+  #design:checked ~ #design_content {
+  display: block;
+  }
+  
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+  background-color: rgba(255, 187, 0, 0.925);
+  color: #fff;
+  }
+  
       &__contents{
         color: #151515;
         display: flex;
