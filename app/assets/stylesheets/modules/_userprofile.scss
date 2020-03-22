@@ -8,15 +8,20 @@
 
   &__profile{
     display: flex;
-    margin-left: 80px;
     padding-top: 30px;
+    margin-left: 530px;
+
     .contents{
-    .main_img{
+    .main_image{
       border-radius: 50%;
+      width: 220px;
+      height: 220px;
       border: 1px solid #000000;
+      
+      
     }
     .main_name{
-      width: 200px;
+      margin-left:90px ;
 
     }
   }

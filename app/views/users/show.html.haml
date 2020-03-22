@@ -2,8 +2,7 @@
 .personal
   .personal__profile
     .contents
-      .main_img
-        = image_tag @user.user_image.url,size:'200x200',class:"main_img"
+      = image_tag @user.user_image.url,size:'180x180',class:"main_image"
       .main_name
         = @user.user_name
     .edition
