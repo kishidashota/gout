@@ -1,8 +1,13 @@
 = render "shared/header"
 .post
   - if user_signed_in? && current_user.id == @post.user_id
-    = link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete"
-    = link_to "編集", edit_post_path(@post.id), class: "postManage__edit"
+    = link_to post_path(@post.id), method: :delete do
+      = icon('fas','trash-alt')
+      Delete
+    = link_to  edit_post_path(@post.id) do
+      = icon('fas','address-card')
+      Edit
+
   .post__content
     .post__content__title
       = @post.shop_name
@@ -17,7 +22,6 @@
             .name
               = link_to user_path(@post.user) do
                 = @post.user.user_name
-
         .brands
           = @post.assortment
     .post__content__detail--post

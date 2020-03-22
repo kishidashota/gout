@@ -6,7 +6,7 @@
     background-color:#252525;
     &__logo{
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      margin-left: 30px;
+      margin-left: 600px;
       line-height: 100px;
       font-size: 40px;
       a{
@@ -52,7 +52,7 @@
           color: #6e6e73;
         }
         .partition{
-          border-bottom: solid 1px rgb(226, 222, 222);
+          border-bottom: 1px solid#dee2e6!important;
           font-size: 2.5rem;
           padding-bottom: 2rem;
           margin-bottom: 2rem;
@@ -102,7 +102,7 @@
           border-radius: 0 0 0 10px;
       
           /*左下角丸*/
-          color: yellow;
+          color: #c0c0c0;
       
           /*アイコン（フォント）色*/
           content: "≡";
@@ -185,7 +185,7 @@
       }
     }
     .partition{
-      border-bottom: solid 5px #000;
+      border-bottom: 1px solid#dee2e6!important;
       font-size: 2.5rem;
       padding-bottom: 2rem;
       margin-bottom: 2rem;
@@ -214,31 +214,41 @@
         }
         .posts{  
           display: flex;
-          width: 220px;
-          height: 200px;
-          border: solid #151515;
-          border-width: 1px;
+          .image{
+          border-radius: 10px;
+          margin:  1.25rem;
           box-shadow:0px 0px 10px;
-          margin-right:50px ;
-          border-radius: 10px;
-          .posts__image{
-            .image{
-          border-radius: 10px;
-            }
           }
+         
           .posts__content{
             margin-left: 10px;
+            border-bottom: 1px solid#dee2e6!important;
+            &__name{
+
+            }
+            .icon{
+              margin-left: 10px;
+              .img{
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin: 0 auto;
+              }
+              .name{
+                font-size: 11px;
+                margin: 0 auto;
+                text-align: center;
+              }
+              
+              
+            }
+            
           .food{
             display: flex;
             align-items: center;
             justify-content: space-between;
           }
-          &__content{
-            background-color: white;
-            color: #333;
-            padding: 16px;
-
-          }
+          
           }
         }
       }
