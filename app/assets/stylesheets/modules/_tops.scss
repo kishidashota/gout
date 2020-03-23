@@ -168,7 +168,7 @@
     z-index:0;
     overflow: hidden;
     background-color:white;
-    height: 100vh;
+    height: auto;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     &__title{
       width: 100%;
@@ -190,30 +190,30 @@
       padding-bottom: 2rem;
       margin-bottom: 2rem;
       margin-top: 0px;
-
     }
     &__contents{
       color: #151515;
       display: flex;
-      
- 
-      &__list{
-        width: 220px;
-        display: inline-block;
-        margin-left: 80px;
-        margin-top: 20px;
- 
+      width: 220px;
+      display: inline-block;
+      margin-left: 80px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
         background-color:white;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+ 
+
+        
         a{
           text-decoration: none;
           color: black;
           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
         }
-        .posts{  
-          display: flex;
+        
+         
           .image{
           border-radius: 10px;
           margin:  1.25rem;
@@ -250,8 +250,8 @@
           }
           
           }
-        }
-      }
+        
+      
     }
     
 

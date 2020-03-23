@@ -13,17 +13,15 @@
         %option{:value => "選択肢5"} ORION
   .partition
   .main__contents
-    .main__contents__list 
-      .posts
-        - @post.each do |o|
-          =link_to post_path(o) do
-            = image_tag o.food_image.url,size:'200x200',class:"image"
-            .posts__content
-              .postt__content__name
-                =o.shop_name
-              .icon
-                .img
-                  = image_tag o.user.user_image.url,size:'30x30',class:"img"
-                .name
-                  = o.user.user_name
+    - @post.each do |o|
+      =link_to post_path(o) do
+        = image_tag o.food_image.url,size:'200x200',class:"image"
+        .posts__content
+          .postt__content__name
+            =o.shop_name
+          .icon
+            .img
+              = image_tag o.user.user_image.url,size:'30x30',class:"img"
+            .name
+              = o.user.user_name
 = render "shared/newpost"
