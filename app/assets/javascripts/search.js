@@ -8,23 +8,34 @@ $(function() {
     } else {
       var current_user = ""
     }
-    var html = `<div class="posts" >
-                    <ul class="more_list">
-                      <li>
-                        <a href="/posts/${post.id}" data-method="get" >詳細</a>
-                      </li>
-                      ${current_user}
-                      ${post.food_image.url}
-                    </ul>
-              
-                  <span class="name">
-                    <a href="/users/${post.user_id}">
-                      <span>投稿者</span>${post.user_name}
-                    </a>
-                  </span>
-                </div>`
+    var html = `
+                
+                    <a herf=  "/posts/${post.id}" data-method="get">
+                    <div class="posts__image">
+                    <div class="image" style="background-image: url(${post.food_image.url});">
+                    </div>
+                    <div class="posts__content">
+                      <div class="postt__content__name">
+                      ${post.shop_name}
+                      </div>
+                      <ul class="food">
+                        <li>
+                        ${post.user_name}
+                          <li>
+                            <i class="fa fa-star likeIcon">7</i>
+                          </li>
+                        </li>
+                      </ul>
+                    </div>
+      `
     search_list.append(html);
   }
+
+  function appendErrMsgToHTML(msg) {
+    var html = `<div class='name'>${ msg }</div>`
+    search_list.append(html);
+  }
+
   $(".search-input").on("keyup", function() {
     var input = $(".search-input").val();
     $.ajax({

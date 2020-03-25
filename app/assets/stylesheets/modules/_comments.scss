@@ -51,6 +51,22 @@
 
 
     }
+
+      .comments{
+        .icon{
+          margin-left: 10px;
+          .img{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          }
+          .name{
+            font-size: 11px;
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+          
     .text{
       width: 600px;
       padding-top: 10px;
@@ -70,3 +86,4 @@
     }
   }
 
+}
