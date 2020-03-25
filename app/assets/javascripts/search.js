@@ -27,7 +27,6 @@ $(function() {
                         </li>
                       </ul>
                     </div>
-        
       `
     search_list.append(html);
   }
