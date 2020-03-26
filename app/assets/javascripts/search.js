@@ -21,9 +21,6 @@ $(function() {
                       <ul class="food">
                         <li>
                         ${post.user_name}
-                          <li>
-                            <i class="fa fa-star likeIcon">7</i>
-                          </li>
                         </li>
                       </ul>
                     </div>
@@ -53,7 +50,7 @@ $(function() {
         });
       }
       else {
-        appendErrMsgToHTML("一致するツイートがありません");
+        appendErrMsgToHTML("一致する投稿はありません");
       }
     })
   });
