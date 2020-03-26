@@ -1,14 +1,26 @@
 
 $(function(){
   function buildHTML(comment){
-    var html = `<div class="icon">
-                  <div class="img">
-                    <a href=/users/${comment.user_id}>${comment.user_name}</a>
-                    <div class="img" style="background-image: url(${comment.user_image.url});">
-                  </div>
-                </div>
-                ${comment.content}
-                <div class>`
+    var html = `
+                  
+                    <div class="data">
+                      <div class="icon">
+                        <div class="image">
+                          <div class="img" style="background-image: url(${comment.user_image.url});">
+                          </div>
+                        </div>
+                        <div class="name">
+                        <a href=/users/${comment.user_id}>${comment.user_name}</a>
+                        </div>
+                      </div>
+                        <div class="content">
+                        ${comment.content}
+                        </div>
+                    </div>
+                  <div class="partition"></div>`
+
+  
+
     return html;
   }
   $('#new_comment').on('submit', function(e){

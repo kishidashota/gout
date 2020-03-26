@@ -1,12 +1,11 @@
 = render "shared/header"
 .post
   - if user_signed_in? && current_user.id == @post.user_id
-    = link_to post_path(@post.id), method: :delete do
-      = icon('fas','trash-alt')
-      Delete
-    = link_to  edit_post_path(@post.id) do
-      = icon('fas','address-card')
-      Edit
+    .delete-edition
+      = link_to "Delete Post" ,post_path(@post.id), method: :delete 
+    .delete-edition
+      = link_to "Edit Post" ,edit_post_path(@post.id) 
+      
 
   .post__content
     .post__content__title
@@ -24,30 +23,33 @@
                 = @post.user.user_name
         .brands
           = @post.assortment
-    .post__content__detail--post
-      .img
-        = image_tag @post.food_image.url,size:'480x300'
-      .description
-        = @post.description
-    .post__content__detail--adress
-  .reviews
-    .input
-      - if current_user
-        = form_with(model: [@post, @comment], local: true, class: "input__contents",id: "new_comment") do |form|
-          = form.text_area :content, placeholder: "Let's try comments", rows: "2",class: "textbox"
-          = form.submit "SEND",class: "form__submit"
-      - else
-        .text
-          ※ コメントの投稿には新規登録/ログインが必要です ※
-      .partition
-      .comments
-        - if @comments
-          - @comments.each do |comment|
-            %p
-              %strong
+      .post__content__detail--post
+        .img
+          = image_tag @post.food_image.url,size:'480x300'
+        .description
+          = @post.description
+
+.reviews
+  .input
+    - if current_user
+      = form_with(model: [@post, @comment], local: true, class: "input__contents",id: "new_comment") do |form|
+        = form.text_area :content, placeholder: "Let's try comments", rows: "2",class: "textbox"
+        = form.submit "SEND",class: "form__submit"
+    - else
+      .text
+        ※ コメントの投稿には新規登録/ログインが必要です ※
+    .comments
+      - if @comments
+        - @comments.each do |comment|
+          .data
+            .icon
+              .image
+                = image_tag comment.user.user_image.url,class:"img"
+              .name
                 = link_to comment.user.user_name, "/users/#{comment.user_id}"
-                ：
-                = comment.content
+            .content
+              = comment.content
+          .partition
 
 
 

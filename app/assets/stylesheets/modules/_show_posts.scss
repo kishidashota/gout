@@ -1,6 +1,21 @@
 .post{
   margin-top: 50px;
-
+  a{
+    text-decoration: none;
+    color: #000;
+    
+  }
+  .delete-edition{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    line-height: 30px;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 10px; 
+    text-align: center; 
+  }
   &__content{
     
     &__partition{
@@ -45,7 +60,7 @@
         }
       }
       &--post{
-        display: flex;
+        
         .img{
           margin-top: 30px;
           margin-left: 20px;
