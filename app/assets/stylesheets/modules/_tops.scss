@@ -6,7 +6,7 @@
     background-color:#252525;
     &__logo{
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      margin-left: 600px;
+      margin-left: 37rem;
       line-height: 100px;
       font-size: 40px;
       a{
@@ -200,9 +200,13 @@
       margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
-        background-color:white;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+      background-color:white;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      
+      .assortment{
+        color: rgb(143, 4, 4);
+        text-align: center;
+      }
  
 
         
@@ -223,10 +227,12 @@
           }
          
           .posts__content{
-            margin-left: 10px;
-            border-bottom: 1px solid#dee2e6!important;
-            &__name{
-
+            margin-left: 4.7rem;
+            display: flex;
+            .by{
+              font-family:'Tahoma';
+              color:rgba(119, 119, 115, 0.603);
+              margin-top: 1rem;
             }
             .icon{
               margin-left: 10px;
@@ -237,9 +243,10 @@
               margin: 0 auto;
               }
               .name{
-                font-size: 11px;
+                font-size: 10px;
                 margin: 0 auto;
                 text-align: center;
+
               }
               
               
@@ -251,6 +258,13 @@
             justify-content: space-between;
           }
           
+          }
+          .partition{
+            border-bottom: 1px solid#dee2e6!important;
+            font-size: 2.5rem;
+            padding-bottom: 0.3rem;
+            margin-bottom: 2rem;
+            margin-top: 0px;
           }
         
       
