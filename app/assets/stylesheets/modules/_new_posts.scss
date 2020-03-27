@@ -20,9 +20,23 @@
     &__recommend{
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       text-align: center;
+      .foodimg{
+        .image-field{
+          margin-left: 12.5rem;
+        
+      }
+      .image-prev{
+        width: 300px;
+        height: 165px;
+        margin-left: 9.5rem;
+  
+        border:solid 1px #000;
+        
+      }
+      }
       .input-default{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        width: 300px;
+        width: 15rem;
         height: 30px;
         color: #000;
         font-weight: 400;
@@ -49,9 +63,23 @@
         border:0px;
         border:solid #000;
         border-width:2px;
-       
-        
+        margin-top: 50px;
       }
+      .address-area{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        width: 300px;
+        height: 60px;
+        color: #000;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        font-size: .875rem;
+        line-height: 2.5rem;
+        border:0px;
+        border:solid #000;
+        border-width:2px;
+      }
+
       .send__btn{
         outline: none;
         background: transparent;

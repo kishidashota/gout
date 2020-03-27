@@ -18,6 +18,21 @@
     }
     &__detail{
       text-align: center;
+      .field{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+        height: auto;
+        .image-field{
+         
+          
+        }
+    }
+    .image-prev{
+      width: 200px;
+      height: 200px;
+      border:solid 1px #000;
+      
+    }
       .input-default{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         width: 300px;

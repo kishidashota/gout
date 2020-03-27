@@ -17,11 +17,11 @@
         %br
         Food image：
         .foodimg
-          = image_tag @post.food_image.url ,class:"foodimg", id: :food_image if @post.food_image?
-        = form.file_field :food_image,id: :image__food 
-        %p
-          = form.check_box :remove_food_image
-          Delete Image
+          = form.file_field :food_image,id: :image_field,class:"image-field"
+          - if @post.food_image.present?
+            = image_tag @post.food_image, id: :img_prev,class:"image-prev"
+          - else
+            = image_tag "noimage.png", id: :img_prev,class:"image-prev"
         %br
         %br
         %br
@@ -33,7 +33,7 @@
         %br
         %br
         Adress：   
-        = form.text_area :address, placeholder: :住所, class: "text-area"
+        = form.text_area :address, placeholder: :住所, class: "address-area"
         %br
         %br
         Assortment：
