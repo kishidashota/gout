@@ -19,6 +19,14 @@
     text-align: center; 
   }
   &__content{
+    &__recommend{
+      .foodimg{
+        width: 100px;
+        height: 80px;
+        margin-left: 15.5rem;
+
+      }
+    }
     
     &__partition{
     border-bottom: solid 1px #000;

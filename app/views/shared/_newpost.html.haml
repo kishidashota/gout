@@ -1,6 +1,14 @@
-.exhibition
-  .exhibition__text
-    New post
-  .exhibition__icon
-    = link_to  new_post_path do
-      = icon('fas','beer fa-2x')
+- if user_signed_in?  
+  .exhibition
+    .exhibition__text
+      New post
+    .exhibition__icon
+      = link_to  new_post_path do
+        = icon('fas','beer fa-2x')
+- else
+  .exhibition
+    .exhibition__text
+      New post
+    .exhibition__icon
+      = link_to  new_user_session_path do
+        = icon('fas','beer fa-2x')

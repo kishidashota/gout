@@ -8,8 +8,9 @@
 
   &__profile{
     display: flex;
+    width: 220px;
     padding-top: 30px;
-    margin-left: 530px;
+    margin:0 auto;
 
     .contents{
     .main_image{
@@ -21,7 +22,9 @@
       
     }
     .main_name{
-      margin-left:90px ;
+      width: 105px;
+    margin: 0 auto;
+    margin-top: 10px;
 
     }
   }
