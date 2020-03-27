@@ -16,7 +16,12 @@
         %br
         %br
         Food image：
-        = form.file_field :food_image
+        .foodimg
+          = image_tag @post.food_image.url ,class:"foodimg", id: :food_image if @post.food_image?
+        = form.file_field :food_image,id: :image__food 
+        %p
+          = form.check_box :remove_food_image
+          Delete Image
         %br
         %br
         %br
