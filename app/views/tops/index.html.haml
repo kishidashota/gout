@@ -16,7 +16,7 @@
     - @post.each do |o|
       =link_to post_path(o) do
         .assortment
-          = o.assortment
+          = o.assortment[1..-2].gsub('",',', ').gsub("\"", "")
         = image_tag o.food_image.url,size:'200x200',class:"image"
         .posts__content
           .by
@@ -26,6 +26,7 @@
               = image_tag o.user.user_image.url,size:'30x30',class:"img"
             .name
               = o.user.user_name
+
         .partition
                
 = render "shared/newpost"

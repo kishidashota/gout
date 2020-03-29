@@ -5,16 +5,11 @@
       new post
     .post__content__recommend
       = form_with model: @post, class: :form, local: true do |form|
-        %br
-        %br
-        %br
-        %br
+   
+   
         Shop name：
         = form.text_field :shop_name, placeholder: :お店の名前, class: "input-default"
-        %br
-        %br
-        %br
-        %br
+ 
         Food image：
         .foodimg
           = form.file_field :food_image,id: :image_field,class:"image-field"
@@ -22,16 +17,10 @@
             = image_tag @post.food_image, id: :img_prev,class:"image-prev"
           - else
             = image_tag "noimage.png", id: :img_prev,class:"image-prev"
-        %br
-        %br
-        %br
-        %br
-        Description：
+  
+        Descriptio4n：
         = form.text_area :description, placeholder: :メニュー説明, class: "text-area"
-        %br
-        %br
-        %br
-        %br
+ 
         Adress：   
         = form.text_area :address, placeholder: :住所, class: "address-area"
         %br

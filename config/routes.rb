@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "tops#index"
   resources :posts, only: [ :new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: :create
+    resources :likes, only: [:create, :destroy]
     collection do
       get 'search'
     end
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
   end
   devise_for :users
   get 'reviews/new'
-  resources :users, only: :show
+  resources :users, only: [:index, :show]
 end

@@ -1,0 +1,7 @@
+= render "shared/header"
+= render "shared/main"
+%h1 ユーザー一覧
+- @users.each do |user|
+  %a{:href => "/users/#{user.id}"}= user.email
+  %hr/
+= link_to "ホームへ戻る", posts_path
