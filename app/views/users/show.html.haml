@@ -33,6 +33,14 @@
     #programming_content.tab_content
       .tab_content_description
         %p.c-txtsp いいね一覧
+        - @user.posts.each do |post|
+          %a{:href => "/posts/#{post.id}"}= post.shop_name
+          %hr/
+        %h3 いいねしている投稿
+        - @user.liked_posts.each do |post|
+          = post.user.email
+          = post.description
+
 
     
   
