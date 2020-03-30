@@ -30,13 +30,16 @@
             .name
               = link_to user_path(@post.user) do
                 = @post.user.user_name
-        .brands
-          = @post.assortment[1..-2].gsub('",',', ').gsub("\"", "")
+        -# .brands
+        -#   = @post.assortment[1..-2].gsub('",',', ').gsub("\"", "")
       .post__content__detail--post
         .img
           = image_tag @post.food_image.url,size:'480x300'
         .description
           = @post.description
+          - @post.tags.each do |tag|
+            = tag.name
+
 
           
 .reviews

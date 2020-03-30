@@ -6,7 +6,6 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string          :address,       null:false
       t.string          :food_image   
       t.integer         :user_id
-      t.text            :assortment,     array: true
       t.timestamps
     end
   end

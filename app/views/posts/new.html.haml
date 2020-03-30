@@ -22,24 +22,31 @@
         .field
           Adress：   
           = form.text_area :address, placeholder: :住所, class: "address-area"
-        .field
-          Assortment：
-          Asahi
-          = form.check_box  :assortment, {multiple: true}, 'Asahi', nil
-          KIRIN
-          = form.check_box  :assortment, {multiple: true}, 'KIRIN', nil
-          SAPPORO
-          = form.check_box  :assortment, {multiple: true}, 'SAPPORO', nil
-          sunToRY
-          = form.check_box  :assortment, {multiple: true}, 'sunToRY', nil
-          YEBISU
-          = form.check_box  :assortment, {multiple: true}, 'YEBISU', nil
-          Others
-          = form.check_box  :assortment, {multiple: true}, 'Others', nil
+        -# .field
+        -#   Assortment：
+        -#   Asahi
+        -#   = form.check_box  :assortment, {multiple: true}, 'Asahi', nil
+        -#   KIRIN
+        -#   = form.check_box  :assortment, {multiple: true}, 'KIRIN', nil
+        -#   SAPPORO
+        -#   = form.check_box  :assortment, {multiple: true}, 'SAPPORO', nil
+        -#   sunToRY
+        -#   = form.check_box  :assortment, {multiple: true}, 'sunToRY', nil
+        -#   YEBISU
+        -#   = form.check_box  :assortment, {multiple: true}, 'YEBISU', nil
+        -#   Others
+        -#   = form.check_box  :assortment, {multiple: true}, 'Others', nil
+        .field 
+          Brands：
+          = form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag|
+            %div
+              = tag.label do
+                = tag.check_box
+                = tag.text
 
-    
+          = form.submit 'form', class:"send__btn"
 
-        = form.submit 'form', class:"send__btn"
+
 
 
  
