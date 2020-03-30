@@ -6,9 +6,19 @@
     .delete-edition
       = link_to "Edit Post" ,edit_post_path(@post.id) 
   .post__content
-    .post__content__title
-      = @post.liked_users.count
-      = @post.shop_name
+    .post__content__topic
+      .title
+        = @post.shop_name
+      .like
+        %h3
+          いいね件数: #{@post.likes.count}
+        - if current_user.already_liked?(@post)
+          = button_to 'いいねを取り消す ※ボタンをハートの形にする', post_like_path(@post), method: :delete,class:"heart"
+        - else
+          = button_to 'いいね !', post_likes_path(@post) 
+        -# %h2 いいねしたユーザー
+        -# - @post.liked_users.each do |user|
+        -#   %li= user.email
     .post__content__recommend
     .post__content__partition
     .post__content__detail
@@ -21,12 +31,13 @@
               = link_to user_path(@post.user) do
                 = @post.user.user_name
         .brands
-          = @post.assortment
+          = @post.assortment[1..-2].gsub('",',', ').gsub("\"", "")
       .post__content__detail--post
         .img
           = image_tag @post.food_image.url,size:'480x300'
         .description
           = @post.description
+
           
 .reviews
   .input
@@ -49,15 +60,7 @@
             .content
               = comment.content
           .partition
-            %h3
-              いいね件数: #{@post.likes.count}
-            - if current_user.already_liked?(@post)
-              = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
-            - else
-              = button_to 'いいね', post_likes_path(@post)
-            %h2 いいねしたユーザー
-            - @post.liked_users.each do |user|
-              %li= user.email
+            
 
 
 

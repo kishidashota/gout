@@ -26,7 +26,9 @@
               = image_tag o.user.user_image.url,size:'30x30',class:"img"
             .name
               = o.user.user_name
-
+            .likes
+            %i.fas.fa-heart{:style => "color: #e43bcd;"}
+            = o.liked_users.count
         .partition
                
 = render "shared/newpost"
