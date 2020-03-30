@@ -2,13 +2,13 @@
 = render "shared/main"
 .main
   .main__title
-    All posts
+    Narrow down
     .main__title__select-box
       = form_tag posts_path, method: :get, class: 'boards__searchForm' do
         = select_tag :tag_id ,options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),{prompt: 'Narrow Down',onchange: 'submit(this.form);'}   
   .partition
   .main__contents
-    - @post.each do |o|
+    - @posts.each do |o|
       =link_to post_path(o) do
         .assortment
           - o.tags.each do |tag|

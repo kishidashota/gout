@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+def index
+    @post = Post.all
+    @post  = Post.all.order("id DESC")
+    @posts = params[:tag_id].present? ? Tag.find(params[:tag_id]).posts : Post.all
+end
+
   def new
     @post = Post.new
   end
@@ -41,6 +47,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:shop_name, :description,:address,:food_image,:remove_food_image,assortment:[]).merge(user_id: current_user.id)
+    params.require(:post).permit(:shop_name, :description,:address,:food_image,:remove_food_image,tag_ids: []).merge(user_id: current_user.id)
   end
 end
