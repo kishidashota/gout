@@ -5,39 +5,37 @@
       new post
     .post__content__recommend
       = form_with model: @post, class: :form, local: true do |form|
-   
-   
-        Shop name：
-        = form.text_field :shop_name, placeholder: :お店の名前, class: "input-default"
- 
-        Food image：
-        .foodimg
-          = form.file_field :food_image,id: :image_field,class:"image-field"
-          - if @post.food_image.present?
-            = image_tag @post.food_image, id: :img_prev,class:"image-prev"
-          - else
-            = image_tag "noimage.png", id: :img_prev,class:"image-prev"
-  
-        Descriptio4n：
-        = form.text_area :description, placeholder: :メニュー説明, class: "text-area"
- 
-        Adress：   
-        = form.text_area :address, placeholder: :住所, class: "address-area"
-        %br
-        %br
-        Assortment：
-        Asahi
-        = form.check_box  :assortment, {multiple: true}, 'Asahi', nil
-        KIRIN
-        = form.check_box  :assortment, {multiple: true}, 'KIRIN', nil
-        SAPPORO
-        = form.check_box  :assortment, {multiple: true}, 'SAPPORO', nil
-        sunToRY
-        = form.check_box  :assortment, {multiple: true}, 'sunToRY', nil
-        YEBISU
-        = form.check_box  :assortment, {multiple: true}, 'YEBISU', nil
-        Others
-        = form.check_box  :assortment, {multiple: true}, 'Others', nil
+        .field
+          Shop name：
+          = form.text_field :shop_name, placeholder: :お店の名前, class: "input-default"
+        .field
+          Food image：
+          .foodimg
+            = form.file_field :food_image,id: :image_field,class:"image-field"
+            - if @post.food_image.present?
+              = image_tag @post.food_image, id: :img_prev,class:"image-prev"
+            - else
+              = image_tag "noimage.png", id: :img_prev,class:"image-prev"
+        .field
+          Descriptio4n：
+          = form.text_area :description, placeholder: :メニュー説明, class: "text-area"
+        .field
+          Adress：   
+          = form.text_area :address, placeholder: :住所, class: "address-area"
+        .field
+          Assortment：
+          Asahi
+          = form.check_box  :assortment, {multiple: true}, 'Asahi', nil
+          KIRIN
+          = form.check_box  :assortment, {multiple: true}, 'KIRIN', nil
+          SAPPORO
+          = form.check_box  :assortment, {multiple: true}, 'SAPPORO', nil
+          sunToRY
+          = form.check_box  :assortment, {multiple: true}, 'sunToRY', nil
+          YEBISU
+          = form.check_box  :assortment, {multiple: true}, 'YEBISU', nil
+          Others
+          = form.check_box  :assortment, {multiple: true}, 'Others', nil
 
     
 

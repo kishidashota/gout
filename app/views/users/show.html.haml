@@ -15,31 +15,38 @@
     %label.tab_item{:for => "programming"} Likes
     #all_content.tab_content
       .tab_content_description
-        .personal__contents
-          .personal__contents__list 
-            - @posts.each do |o|
-              =link_to post_path(o) do
-                .posts__image
-                  = image_tag o.food_image.url,size:'200x200',class:"image"
-                .posts__content
-                  .postt__content__name
-                    =o.shop_name
-                  %ul.food
-                    %li
-                      = o.user.user_name
-                      %li
-                        %i.fa.fa-star.likeIcon 7
+        - @posts.each do |o|
+          =link_to post_path(o) do
+            = image_tag o.food_image.url,size:'200x200',class:"image"
+            .posts__content
+              = icon('fas','heart')
+              = o.liked_users.count
+
         .personal__title__select-box
     #programming_content.tab_content
       .tab_content_description
-        %p.c-txtsp いいね一覧
-        - @user.posts.each do |post|
-          %a{:href => "/posts/#{post.id}"}= post.shop_name
-          %hr/
+        -# - @user.posts.each do |post|
+        -#   %a{:href => "/posts/#{post.id}"}= post.shop_name
+        -#   .assortment
+        -#     = post.assortment[1..-2].gsub('",',', ').gsub("\"", "")
+        -#   = image_tag post.food_image.url,size:'200x200',class:"image"
+        -#   .posts__content
+        -#     .by
+        -#       by
+        -#     .icon
+        -#       .img
+        -#         = image_tag post.user.user_image.url,size:'30x30',class:"img"
+        -#       .name
+        -#         = post.user.user_name
+        -#       .likes
+        -#         = post.liked_users.count
+        -#   .partition
         %h3 いいねしている投稿
         - @user.liked_posts.each do |post|
-          = post.user.email
-          = post.description
+          = image_tag post.food_image.url,size:'200x200',class:"image"
+          = post.user.user_name
+          = image_tag post.user.user_image.url,size:'30x30',class:"img"
+
 
 
     
