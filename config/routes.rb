@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   devise_for :users
   get 'reviews/new'
   resources :users, only: [:index, :show]
+  resources :tops , only: [:index, :show]
 end
