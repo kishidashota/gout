@@ -1,10 +1,10 @@
 Tag.create([
-    { name: 'Asahi' },
-    { name: 'KIRIN' },
-    { name: 'SAPPORO'},
-    { name: 'sunToRY'},
-    { name: 'YEBISU'},
-    { name: 'Orion'},
-    { name: 'Craft'},
-    { name: 'Others'}
+    { name: 'アサヒ' },
+    { name: 'キリン' },
+    { name: 'サッポロ'},
+    { name: 'サントリー'},
+    { name: 'エビス'},
+    { name: 'オリオン'},
+    { name: 'クラフト'},
+    { name: 'その他'}
     ])
