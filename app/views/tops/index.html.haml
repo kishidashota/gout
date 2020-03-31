@@ -1,31 +1,21 @@
 = render "shared/header"
-= render "shared/main"
-.main
-  .main__title
-    All posts
-    .main__title__select-box
-      = form_tag posts_path, method: :get, class: 'boards__searchForm' do
-        = select_tag :tag_id ,options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),{prompt: 'Narrow Down',onchange: 'submit(this.form);'}   
-  .partition
-  .main__contents
-    - @post.each do |o|
-      =link_to post_path(o) do
-        .assortment
-          - o.tags.each do |tag|
-            = tag.name
-          -# = o.assortment[1..-2].gsub('",',', ').gsub("\"", "")
-        = image_tag o.food_image.url,size:'200x200',class:"image"
-        .posts__content
-          .by
-            by
-          .icon
-            .img
-              = image_tag o.user.user_image.url,size:'30x30',class:"img"
-            .name
-              = o.user.user_name
-            .likes
-            %i.fas.fa-heart{:style => "color: red;"}
-            = o.liked_users.count
-        .partition
-               
-= render "shared/newpost"
+.toppage
+  .toppage__content
+    .toppage__content--title
+      Gout
+    .toppage__content--description
+      居酒屋ごとのビールの銘柄を確認できます。
+      自分のお気に入りの居酒屋(メニュー)を投稿することもできます。
+    .buttons
+      .link
+        - if user_signed_in?
+          = link_to posts_path do
+            始める
+        - else
+          = link_to new_user_session_path do
+            始める
+      .link
+        = link_to top_path(:id) do
+          使い方
+        
+    
