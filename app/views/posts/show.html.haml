@@ -7,6 +7,17 @@
       = link_to "Edit Post" ,edit_post_path(@post.id) 
   .post__content
     .post__content__topic
+      .post__content__detail--contributor
+        .icon
+          =link_to post_path(@post.id) do
+            .img
+              = image_tag @post.user.user_image.url,size:'30x30',class:"img"
+            .name
+              = link_to user_path(@post.user) do
+                = @post.user.user_name
+        .time
+          = icon("far", "clock")
+          = @post.created_at.strftime('%Y/%m/%d %H:%M')
       .title
         = @post.shop_name
         .like
@@ -23,47 +34,55 @@
     .post__content__recommend
     .post__content__partition
     .post__content__detail
-      .post__content__detail--contributor
-        .icon
-          =link_to post_path(@post.id) do
-            .img
-              = image_tag @post.user.user_image.url,size:'30x30',class:"img"
-            .name
-              = link_to user_path(@post.user) do
-                = @post.user.user_name
+      .tags
+        - @post.tags.each do |tag|
+          .tag
+            = tag.name
+
+          
         -# .brands
         -#   = @post.assortment[1..-2].gsub('",',', ').gsub("\"", "")
       .post__content__detail--post
-        .img
-          = image_tag @post.food_image.url,size:'480x300'
-        .description
-          = @post.description
-          - @post.tags.each do |tag|
-            = tag.name
-
-
-          
-.reviews
-  .input
-    - if current_user
-      = form_with(model: [@post, @comment], local: true, class: "input__contents",id: "new_comment") do |form|
-        = form.text_area :content, placeholder: "Let's try comments", rows: "2",class: "textbox"
-        = form.submit "SEND",class: "form__submit"
-    - else
-      .text
-        ※ コメントの投稿には新規登録/ログインが必要です ※
-    .comments
-      - if @comments
-        - @comments.each do |comment|
-          .data
-            .icon
-              .image
-                = image_tag comment.user.user_image.url,class:"img"
-              .name
-                = link_to comment.user.user_name, "/users/#{comment.user_id}"
-            .content
-              = comment.content
+        .content
+          .img
+            = image_tag @post.food_image.url,size:'300x300',class:"image"
           .partition
+          .description
+            = @post.description
+          .partition
+          .address
+            GoogleMap
+        .reviews
+          .input
+            - if current_user
+              = form_with(model: [@post, @comment], local: true, class: "input__contents",id: "new_comment") do |form|
+                = form.text_area :content, placeholder: "Let's try comments", rows: "2",class: "textbox"
+                = form.submit "SEND",class: "form__submit"
+            - else
+              .text
+                ※ コメントの投稿には新規登録/ログインが必要です ※
+            .partition
+            .comments
+              - if @comments
+                - @comments.each do |comment|
+                  .data
+                    .icon
+                      .image
+                        = image_tag comment.user.user_image.url,class:"img"
+                      .name
+                        = link_to comment.user.user_name, "/users/#{comment.user_id}"
+                    .content
+                      = comment.content
+                  .partition
+          
+          
+          
+
+           
+    
+
+        
+            
             
 
 

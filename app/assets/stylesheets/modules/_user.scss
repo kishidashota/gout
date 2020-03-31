@@ -73,17 +73,10 @@
       }
       .actions{
         .btn{
-          outline: none;
-          background: transparent;
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-          color:white;
-          background: darkorange;
           width: auto;
           text-align: center;
           padding: .8em;
-          font-size: 1.5rem;
           display: block;
-          margin: auto;
           border: 3px solidred;
           transition: all .3s;
           cursor: pointer;
@@ -92,8 +85,13 @@
           font-size: 16px;
           font-weight: bold;
           margin: 0 auto;
+          border: 4px solid red;
           margin-top: 20px;
+          border-radius: 25px;
+          background-color: white;
         }
+   
+   
       }
     }
   }
