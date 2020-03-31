@@ -5,14 +5,15 @@
     Narrow down
     .main__title__select-box
       = form_tag posts_path, method: :get, class: 'boards__searchForm' do
-        = select_tag :tag_id ,options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),{prompt: 'Narrow Down',onchange: 'submit(this.form);'}   
+        = select_tag :tag_id ,options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),{prompt: '絞り込み',onchange: 'submit(this.form);'}   
   .partition
   .main__contents
     - @posts.each do |o|
       =link_to post_path(o) do
-        .assortment
+        .tags
           - o.tags.each do |tag|
-            = tag.name
+            .tag
+              = tag.name
           -# = o.assortment[1..-2].gsub('",',', ').gsub("\"", "")
         = image_tag o.food_image.url,size:'200x200',class:"image"
         .posts__content

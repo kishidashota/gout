@@ -189,6 +189,7 @@
     }
     &__contents{
       color: #151515;
+      
       display: flex;
       width: 1200px;
       display: inline-block;
@@ -198,16 +199,26 @@
       flex-wrap: wrap;
       background-color:white;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      
-      .assortment{
-        color: rgb(143, 4, 4);
-        text-align: center;
-        height: 40px;
-        width: 200px;
+      .tags{
+        display: flex;
+        height: auto;
+        margin-top: 1rem;
         margin: 0 auto;
-      }
+        width: 220px;
+        flex-wrap: wrap;
+        margin-top:1rem ;
+        .tag{
+          background-color: #ffc400;
+          color: rgb(58, 56, 56);
+          width: auto;
+          line-height: 15px;
+          margin-left: 6px;
+          padding: 4px;
+          border-radius: 4px;
+        }
+      
  
-
+      }
         
         a{
           text-decoration: none;
