@@ -6,8 +6,9 @@
       .main_name
         = @user.user_name
       - if user_signed_in? && current_user.id.to_s == params[:id]
-        .edition
-          = link_to "Edit Profile " ,edit_user_registration_path 
+        - unless @user.email == "test@gmail.com"
+          .edition
+            = link_to "Edit Profile " ,edit_user_registration_path 
   .tabs
     %input#all{:checked => "checked", :name => "tab_item", :type => "radio"}/
     %label.tab_item{:for => "all"} My Posts

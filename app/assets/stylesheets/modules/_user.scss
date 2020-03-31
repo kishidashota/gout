@@ -71,6 +71,30 @@
         margin: 0 auto;
         margin-top: 20px;
       }
+      .actions{
+        .btn{
+          outline: none;
+          background: transparent;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          color:white;
+          background: darkorange;
+          width: auto;
+          text-align: center;
+          padding: .8em;
+          font-size: 1.5rem;
+          display: block;
+          margin: auto;
+          border: 3px solidred;
+          transition: all .3s;
+          cursor: pointer;
+          text-decoration: none;
+          line-height: 1;
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+      }
     }
   }
 
