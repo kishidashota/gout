@@ -190,7 +190,7 @@
     &__contents{
       color: #151515;
       display: flex;
-      width: 1020px;
+      width: 1200px;
       display: inline-block;
       margin-left: 80px;
       margin-top: 20px;
@@ -202,6 +202,9 @@
       .assortment{
         color: rgb(143, 4, 4);
         text-align: center;
+        height: 40px;
+        width: 200px;
+        margin: 0 auto;
       }
  
 
@@ -274,6 +277,7 @@
     width: 70px;
     height: 70px;
     background: yellow;
+    opacity: 0.8;
     text-align: center;
     border-radius: 50%;
     bottom: 32px;

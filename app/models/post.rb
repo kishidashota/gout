@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   has_many :tags, through: :post_tags
   def self.search(search)
     if search
-      Post.where('name LIKE(?)', "%#{search}%")
+      Post.where('shop_name LIKE(?)', "%#{search}%")
     else
       Post.all
     end

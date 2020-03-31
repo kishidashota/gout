@@ -19,22 +19,52 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 40px;
     margin: 0 auto;
-      }
+    display: flex;
     .like{
       font-size: 15px;
- 
+      margin-left: 12px;
+      margin-top: 8px;
 .heart{
- font-size: 12px;
-  background-color: red;
-  
+  &:before{
+    content: "\f004";
+    display: block;
+    margin-bottom: -20px;
   }
-  
+  }
+
+input{
+  background: none;
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin-top: -35px;
+}
+.heart2{
+  &:before{
+    content: "\f004";
+    display: block;
+    margin-bottom: -20px;
+  }
+  }
+
+input{
+  background: none;
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin-top: -35px;
+}
   
     }
+  }
     }
     &__recommend{
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       text-align: center;
+      width: 536px;
+      text-align: left;
+          margin: auto;
+
       .foodimg{
         .image-field{
           margin-left: 12.5rem;
@@ -43,7 +73,7 @@
       .image-prev{
         width: 300px;
         height: 165px;
-        margin-left: 9.5rem;
+        margin-left: 0.5rem;
   
         border:solid 1px #000;
         

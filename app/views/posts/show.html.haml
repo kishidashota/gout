@@ -9,16 +9,17 @@
     .post__content__topic
       .title
         = @post.shop_name
-      .like
-        %h3
-          いいね件数: #{@post.likes.count}
-        - if current_user.already_liked?(@post)
-          = button_to 'いいねを取り消す ※ボタンをハートの形にする', post_like_path(@post), method: :delete,class:"heart"
-        - else
-          = button_to 'いいね !', post_likes_path(@post) 
-        -# %h2 いいねしたユーザー
-        -# - @post.liked_users.each do |user|
-        -#   %li= user.email
+        .like
+          %h3
+          - if current_user.already_liked?(@post)
+            .heart.fas.fa-heart.fa-3x{:style => "color: red;"}
+              = button_to  '', post_like_path(@post), method: :delete
+          - else
+            .heart.far.fa-heart.fa-3x{:style => "color: gray;"}
+              = button_to '', post_likes_path(@post) 
+          -# %h2 いいねしたユーザー
+          -# - @post.liked_users.each do |user|
+          -#   %li= user.email
     .post__content__recommend
     .post__content__partition
     .post__content__detail
