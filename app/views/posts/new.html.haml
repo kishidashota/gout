@@ -20,8 +20,10 @@
           Descriptio4n：
           = form.text_area :description, placeholder: :メニュー説明, class: "text-area"
         .field
-          Adress：   
-          = form.text_area :address, placeholder: :住所, class: "address-area"
+          = form.label :address
+          = form.text_field :address, placeholder: :住所, class: "address-area"
+  
+
         -# .field
         -#   Assortment：
         -#   Asahi
