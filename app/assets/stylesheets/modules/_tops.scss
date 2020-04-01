@@ -46,6 +46,7 @@
       #ham-menu {
         a{
           color: #6e6e73;
+          text-decoration: none;
         }
         .partition{
           border-bottom: 1px solid#dee2e6!important;
@@ -191,30 +192,37 @@
       color: #151515;
       
       display: flex;
-      width: 1200px;
+      width: 1040px;
       display: inline-block;
       margin-left: 80px;
       margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       background-color:white;
+      margin: 0 auto;
+
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       .tags{
         display: flex;
-        height: auto;
+        height: 65px;
+    
         margin-top: 1rem;
         margin: 0 auto;
-        width: 220px;
+        width: 210px;
         flex-wrap: wrap;
         margin-top:1rem ;
+
+   
         .tag{
-          background-color: #ffc400;
-          color: rgb(58, 56, 56);
+          background-color: black;
+          color: lightyellow;
           width: auto;
+          height: 15px;
           line-height: 15px;
           margin-left: 6px;
           padding: 4px;
           border-radius: 4px;
+          margin: 1px;
         }
       
  
@@ -240,9 +248,10 @@
             margin-left: 4.7rem;
             display: flex;
             .by{
-              font-family:'Tahoma';
-              color:rgba(119, 119, 115, 0.603);
+              font-family: 'Tahoma';
+              color: rgba(119, 119, 115, 0.603);
               margin-top: 1rem;
+              font-style: italic;
             }
             .icon{
               margin-left: 10px;
@@ -262,11 +271,7 @@
               
             }
             
-          .food{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          }
+      
           
           }
           .partition{

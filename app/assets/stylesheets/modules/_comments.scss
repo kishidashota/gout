@@ -6,7 +6,7 @@
     border-width: 1px;
   .input{
     &__contents{
-      width: 495px;
+      width: 400px;
       display: flex;
       margin: 0 auto;
 
@@ -50,7 +50,7 @@
       padding-bottom: 5px;
       margin-bottom: 10px;
       margin-top: 5px;
-      width: 600px;
+      
       }
       .comments{
         .partition{
@@ -64,7 +64,7 @@
         .data{
           display: flex;
         .icon{
-          margin-left: 60px;
+          margin-left: 32px;
           width: 30px;
           .img{
           width: 30px;
@@ -76,14 +76,14 @@
             width: 30px;
             font-size: 11px;
             margin: 0 auto;
-            
+            font-size: 4px;
           }
         }
           
     .content{
       border: 1px solid rgb(170, 166, 166);
       border-radius: 10px;
-      width: 500px;
+      width: 290px;
       padding-top: 10px;
       margin-left: 20px;
       font-size: 14px;
