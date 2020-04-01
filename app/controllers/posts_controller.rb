@@ -47,6 +47,6 @@ end
 
   private
   def post_params
-    params.require(:post).permit(:shop_name, :description,:address,:food_image,:remove_food_image,tag_ids: []).merge(user_id: current_user.id)
+    params.require(:post).permit(:shop_name, :description,:address, :latitude, :longitude,:food_image,:remove_food_image,tag_ids: []).merge(user_id: current_user.id)
   end
 end

@@ -51,7 +51,26 @@
             = @post.description
           .partition
           .address
-            GoogleMap
+            #map{:style => "width: 100%; height: 400px;"}
+              :javascript
+                handler = Gmaps.build('Google');
+                    handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
+                      markers = handler.addMarkers([
+                        {
+                          "lat": #{@post.latitude},
+                          "lng": #{@post.longitude},
+                        }
+                      ]);
+                      handler.bounds.extendWith(markers);
+                      handler.fitMapToBounds();
+                      handler.getMap().setZoom(17);
+                    });
+        %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=[AIzaSyAedk6YX-_eGNSi1s9uzgj0Z1LLQvEDMlI ]&callback=initMap"}
+
+
+            
+
+
         .reviews
           .input
             - if current_user
