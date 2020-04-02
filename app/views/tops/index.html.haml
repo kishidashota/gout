@@ -9,7 +9,7 @@
           = select_tag :tag_id ,options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),{prompt: '絞り込み',onchange: 'submit(this.form);'}   
     .partition
     .main__contents
-      - @posts.each do |o|
+      - @post.each do |o|
         =link_to post_path(o) do
           .tags
             - o.tags.each do |tag|
@@ -28,9 +28,10 @@
               .likes
               %i.fas.fa-heart{:style => "color: red;"}
               = o.liked_users.count
-          .partition
-               
+          .partition 
+  = paginate(@post)
   = render "shared/newpost"
+  
 - else
   .toppage
     .toppage__content

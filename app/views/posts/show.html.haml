@@ -8,18 +8,13 @@
   .post__content
     .post__content__topic
       .post__content__detail--contributor
-        .by
-          by
         .icon
           =link_to post_path(@post.id) do
-            .img
-              = image_tag @post.user.user_image.url,size:'30x30',class:"img"
-            .name
-              = link_to user_path(@post.user) do
-                = @post.user.user_name
-        .time
-          = icon("far", "clock")
-          = @post.created_at.strftime('%Y/%m/%d %H:%M')
+            = image_tag @post.user.user_image.url,size:'30x30',class:"img"
+        .name
+          = link_to user_path(@post.user) do
+            = @post.user.user_name
+        
       .title
         = @post.shop_name
         .like
@@ -48,6 +43,9 @@
         .content
           .img
             = image_tag @post.food_image.url,size:'300x300',class:"image"
+            .time
+              = icon("far", "clock")
+              = @post.created_at.strftime('%Y/%m/%d %H:%M')
           .partition
           .description
             = @post.description
