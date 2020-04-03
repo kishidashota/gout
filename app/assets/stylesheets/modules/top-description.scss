@@ -1,0 +1,18 @@
+.wrapper{
+  background-color: white;
+  .descr1{
+    margin-top: 40px;
+    font-size: 38px;
+    text-align: center;
+    &-contents{
+      margin: 0 auto;
+      margin-top: 40px;
+      display: block;
+      width: 500px;
+    }
+    
+  }
+  .down{
+    text-align: center;
+  }
+}

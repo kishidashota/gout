@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   var search_list = $(".main__contents__list");
 
   function appendPost(post) {
