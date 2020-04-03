@@ -12,8 +12,9 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery
+//= require jquery.turbolinks
+//= require turbolinks
 //= require rails-ujs 
 //= require underscore
 //= require gmaps/google
