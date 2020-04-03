@@ -4,18 +4,33 @@
     margin-left: 50px;
     margin-top: 10px;
     border-width: 1px;
+    
   .input{
     &__contents{
-      width: 400px;
+      width: 450px;
+      height: 150px;
       display: flex;
       margin: 0 auto;
+      border: 3px solid #b9b9b9;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+      .title{
+        text-align: center;
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-bottom: 2px solid #777474;
+        height: 40px;
+        .form{
+          display: flex;
       .textbox{
         border-radius: 5px;
-        width: 415px;
+        width: 315px;
         height: 25px;
-        border: solid  rgb(145, 144, 144) 1px;
-        margin-top: 10px;
+        border: solid  #777474 1px;
+        margin-top: 35px;
         margin-left: 10px;
         margin-right: 3px;
         padding: 10px;
@@ -42,8 +57,10 @@
         font-size: 15px;
         border-radius: 5px;
         margin-right: 10px;
-        margin-top: 10px;
+        margin-top: 35px;
       }
+    }
+    }
     }
     .partition{
       border-bottom: 2px solid rgb(145, 144, 144);

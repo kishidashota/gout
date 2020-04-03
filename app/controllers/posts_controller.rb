@@ -17,7 +17,8 @@ end
 
   def create
     Post.create(post_params)
-    redirect_to root_path
+    redirect_to root_path, notice: '投稿されました'
+  
   end
 
   def edit
