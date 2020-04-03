@@ -1,12 +1,26 @@
 = render "shared/header"
-.descr1
-ハンバーガーメニューの説明
-.descr2
-投稿方法
-.descr3
-検索の種類 (タグ検索、お店検索)
-.descr4
-プロフィールランの説明
+.wrapper
+
+  .descr1
+    = icon('fas','question-circle')
+    Goutとは
+    .descr1-contents
+      居酒屋の投稿アプリです。
+      %span{:style => "color: darkorange"}
+        = icon('fas','bahai')
+        好きなビールの銘柄が置いてあるお店をすぐに見つけられます。
+  .down
+    = icon('fas','angle-double-down fa-3x')
+  .descr5
+    右上のハンバーガメニューから、好きなページに飛べます。
+  
+  .descr2
+    お勧料理の画像とともに投稿されますお店をビールの銘柄で絞り込めます
+  .descr3
+    投稿者のおすすめポイントや、住所、コメント、いいねが行えます。
+  .descr4
+    お店の名前から検索もできます
+  
 
 
 
