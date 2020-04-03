@@ -1,7 +1,4 @@
-.header
-  .header__logo
-    =link_to root_path do
-      Gout
+= render "shared/header"
 .main
   .header__search
     .container
@@ -19,8 +16,6 @@
             .posts__content
               .postt__content__name
                 =o.shop_name
-              %ul.food
-                %li
-                  = o.user.user_name
+
                   
     

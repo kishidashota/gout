@@ -111,20 +111,29 @@
     flex-wrap: wrap;
     background-color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
-    
+    .icon{
+      display: flex;
+      .img{
+        border-radius: 50%;
+        margin-left: 20px;
+      }
+      .name{
+        width: 100px;
+        margin: 0 auto;
+        font-size: 12px;
+        line-height: 30px;
+      }
+    }
     .image{
-   
       border-radius: 10px;
       margin:  1rem;
       box-shadow:0px 0px 10px;
       width: 200px;
       height: 200px;
-      
-    
-    
   }
   .posts__content{
-
+    font-family: monospace;
+    font-size: 12px;
     text-align: center;
   
 
@@ -189,7 +198,6 @@
           background-color: white;
           color: #333;
           padding: 16px;
-
         }
         }
       }

@@ -66,21 +66,18 @@
                       handler.getMap().setZoom(17);
                     });
         -# %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=[AIzaSyAedk6YX-_eGNSi1s9uzgj0Z1LLQvEDMlI ]&callback=initMap"}
-
-
-            
-
-
         .reviews
           .input
             - if current_user
               = form_with(model: [@post, @comment], local: true, class: "input__contents",id: "new_comment") do |form|
-                = form.text_area :content, placeholder: "Let's try comments", rows: "2",class: "textbox"
-                = form.submit "SEND",class: "form__submit"
+                .title
+                  Comment
+                  .form
+                    = form.text_area :content, rows: "2",class: "textbox"
+                    = form.submit "SEND",class: "form__submit"
             - else
               .text
                 ※ コメントの投稿には新規登録/ログインが必要です ※
-            .partition
             .comments
               - if @comments
                 - @comments.each do |comment|

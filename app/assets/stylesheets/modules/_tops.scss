@@ -23,15 +23,16 @@
             padding-left: 20px;
             padding-right: 20px;
             border: none;
-            border-radius: 7px;
             width: 400px;
            height: 40px;
+           border-bottom: 1px solid#dee2e6!important;
+
           }
          .search_btn{
            cursor: pointer;
-           width: 30px;
-           height: 30px;
-           background-color:#252525;
+           width: 33px;
+           height: 33px;
+           background-color: #cecdcd;
            .search-icon{
              color: white;
              font-size: 20px;
