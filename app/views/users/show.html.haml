@@ -44,7 +44,7 @@
         -#         = post.user.user_name
         -#       .likes
         -#         = post.liked_users.count
-        -#   .partition
+
         - @user.liked_posts.each do |post|
           =link_to "#" do
             = image_tag post.food_image.url,size:'200x200',class:"image"

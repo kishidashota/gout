@@ -2,7 +2,7 @@
 .post
   - if user_signed_in? && current_user.id == @post.user_id
     .delete-edition
-      = link_to "Delete Post" ,post_path(@post.id), method: :delete 
+      = link_to "Delete Post" ,post_path(@post.id), method: :delete , data: { confirm: '削除しますか？' }
     .delete-edition
       = link_to "Edit Post" ,edit_post_path(@post.id) 
   .post__content
@@ -16,7 +16,6 @@
             = @post.user.user_name
         
       .title
-        = @post.shop_name
         .like
           %h3
           - if current_user.already_liked?(@post)
@@ -24,10 +23,13 @@
               = button_to  '', post_like_path(@post), method: :delete
           - else
             .heart.far.fa-heart.fa-3x{:style => "color: gray;"}
-              = button_to '', post_likes_path(@post) 
-          -# %h2 いいねしたユーザー
-          -# - @post.liked_users.each do |user|
-          -#   %li= user.email
+              = button_to '', post_likes_path(@post)
+        .count
+          = @post.liked_users.count 
+        .name
+          = @post.shop_name
+ 
+          
     .post__content__recommend
     .post__content__partition
     .post__content__detail
@@ -51,6 +53,8 @@
             = @post.description
           .partition
           .address
+            ・
+            = @post.address
             #map{:style => "width: 100%; height: 400px;"}
               :javascript
                 handler = Gmaps.build('Google');
@@ -66,6 +70,10 @@
                       handler.getMap().setZoom(17);
                     });
         -# %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=[AIzaSyAedk6YX-_eGNSi1s9uzgj0Z1LLQvEDMlI ]&callback=initMap"}
+        .iii
+          いいねしたユーザー
+          - @post.liked_users.each do |user|
+            %li= user.user_name
         .reviews
           .input
             - if current_user
