@@ -2,6 +2,7 @@
 = render "shared/main"
 %h1 ユーザー一覧
 - @users.each do |user|
-  %a{:href => "/users/#{user.id}"}= user.email
+  %a{:href => "/users/#{user.id}"}= image_tag user.user_image.url,size:'200x200',class:"image"
+
   %hr/
 = link_to "ホームへ戻る", posts_path
