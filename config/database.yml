@@ -51,5 +51,5 @@ production:
   <<: *default
   database: gout_production
   username: root
-  password: <%= ENV['Tktmrm4-4T'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
