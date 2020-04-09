@@ -12,9 +12,9 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Tktmrm44T
+  password:
   socket: /tmp/mysql.sock
 
 development:
@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: gout_production
-  username: root
+  username: gout
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
