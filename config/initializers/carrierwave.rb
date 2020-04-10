@@ -17,4 +17,5 @@ CarrierWave.configure do |config|
 
   config.fog_directory  = 'deploy-gout'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/deploy-gout'
+  end
 end
