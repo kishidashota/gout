@@ -6,7 +6,8 @@ lock '3.13.0'
 set :application, 'gout'
 
 # どのリポジトリからアプリをpullするかを指定する
-set :repo_url,  'https://github.com/kishidashota/gout.git'
+set :repo_url,  'git@github.com:kishidashota/gout.git'
+
 
 
 # バージョンが変わっても共通で参照するディレクトリを指定
