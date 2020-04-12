@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
@@ -77,10 +77,9 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
-gem 'ransack',' 2.3.2'
+gem 'ransack'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'dotenv-rails'
 gem 'kaminari'
 gem 'jquery-turbolinks'
-gem 'fog-aws'
