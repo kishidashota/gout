@@ -18,11 +18,13 @@
           %br/
         .field
           = f.label :user_image
+          %br/
+          %br/
           #img_field{:onclick => "$('#file').click()"}
             - if @user.user_image.url.present?
               = image_tag(@user.user_image.url)
             - else
-              %i.fas.fa-user.fa-5x
+              %i.fas.fa-user.fa-5x{:style => "color: silver;"}
           = f.file_field :user_image, class: "image", style: "display:none;", id: "file"
 
           %br/
