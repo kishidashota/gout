@@ -11,10 +11,11 @@ $(document).on('turbolinks:load', function() {
     var html = `
                     <a herf=  "/posts/${post.id}" data-method="get">
                     <div class="posts__image">
-                    <div class="image" style="background-image: url(${post.food_image.url});">
+                      <img class="image" src=${post.food_image.url}>
+                      </div>
                     </div>
                     <div class="posts__content">
-                      <div class="postt__content__name">
+                      <div class="post__content__name">
                       ${post.shop_name}
                       </div>
                       <ul class="food">
