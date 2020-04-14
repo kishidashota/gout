@@ -12,7 +12,7 @@
               = image_tag(@user.food_image.url)
             - else
               %i.fas.fa-folder-plus.fa-7x.fa-border{:style => "color: gray;"}
-          = form.file_field :post_image, class: "image", style: "display:none;", id: "file"
+          = form.file_field :food_image, class: "image", style: "display:none;", id: "file"
         .field
           Shop name：
           = form.text_field :shop_name, placeholder: :お店の名前, class: "input-default"
@@ -23,14 +23,13 @@
         .field
           = form.label :address
           = form.text_field :address, placeholder: :"住所  (例)東京都世田谷区", class: "address-area"
-        .field
-          .tag
-            = form.label :Brands
-            = form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag|
-              .tagselect
-                = tag.label do
-                  = tag.check_box
-                  = tag.text
+        .tag
+          = form.label :Brands
+          = form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag|
+            .tagselect
+              = tag.label do
+                = tag.check_box
+                = tag.text
 
           = form.submit 'form', class:"send__btn"
 

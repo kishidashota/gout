@@ -14,8 +14,9 @@
           = f.label :email
           %br/
           = f.email_field :email, autofocus: true, autocomplete: "email",class:"input-default"
-        .foodimg
-          User image：
+        .field
+          = f.label :user_image
+          %br/
           = image_tag @user.user_image.url ,class:"foodimg", id: :food_image if @user.user_image?
         = f.file_field :user_image,id: :image__food 
         %p

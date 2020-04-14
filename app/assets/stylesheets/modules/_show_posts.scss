@@ -20,7 +20,17 @@
   &__content{
     height: auto;
     &__recommend{
-
+      .foodimg{
+        .foodimg{
+          border-radius: 10px;
+          margin-top: 1.25rem;
+          margin-left: 1.25rem;
+          margin-right: 1.25rem;
+          box-shadow: 0px 0px 10px;
+          width: 200px;
+          height: 200px;
+        }
+      }
     }
     
     &__partition{

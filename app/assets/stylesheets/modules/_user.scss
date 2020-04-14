@@ -7,7 +7,6 @@
   &__authentication{
     border: solid solid #151515;
     border-width: 1px;
-
     margin-right:50px ;
     padding-top:20px ;
     width: 1100px;
@@ -26,13 +25,13 @@
       .field{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         height: auto;
-     
-       .preview{
-        width: 150px;
-        height: 150px;
-       }
+       .foodimg{
+        width: 200px;
+        height: 200px;
+      }
      
     }
+  
     .image-prev{
       margin-top: 20px;
       width: 200px;
