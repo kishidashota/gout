@@ -70,10 +70,6 @@
                       handler.getMap().setZoom(17);
                     });
         -# %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?v=3.exp&key=[AIzaSyAedk6YX-_eGNSi1s9uzgj0Z1LLQvEDMlI ]&callback=initMap"}
-        .iii
-          いいねしたユーザー
-          - @post.liked_users.each do |user|
-            %li= user.user_name
         .reviews
           .input
             - if current_user
