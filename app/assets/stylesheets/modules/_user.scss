@@ -24,14 +24,14 @@
     &__detail{
       text-align: center;
       .field{
-      
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
         height: auto;
-        .image-field{
-         
-          
-        }
+     
+       .preview{
+        width: 150px;
+        height: 150px;
+       }
+     
     }
     .image-prev{
       margin-top: 20px;

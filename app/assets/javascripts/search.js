@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  var search_list = $(".main__contents__list");
+  var search_list = $(".main__contents");
 
   function appendPost(post) {
     if(post.user_sign_in && post.user_sign_in.id == post.user_id){
@@ -9,7 +9,6 @@ $(document).on('turbolinks:load', function() {
       var current_user = ""
     }
     var html = `
-                
                     <a herf=  "/posts/${post.id}" data-method="get">
                     <div class="posts__image">
                     <div class="image" style="background-image: url(${post.food_image.url});">
@@ -43,7 +42,7 @@ $(document).on('turbolinks:load', function() {
     })
     .done(function(posts) {
       search_list.empty();
-      $(".main__contents__list").empty();
+      $(".main__contents").empty();
       if (posts.length !== 0) {
         posts.forEach(function(post){
           appendPost(post);

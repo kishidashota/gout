@@ -6,45 +6,31 @@
     .post__content__recommend
       = form_with model: @post, class: :form, local: true do |form|
         .field
+          Food image：
+          #img_field{:onclick => "$('#file').click()"}
+            - if @post.food_image.url.present?
+              = image_tag(@user.food_image.url)
+            - else
+              %i.fas.fa-folder-plus.fa-7x.fa-border{:style => "color: gray;"}
+          = form.file_field :post_image, class: "image", style: "display:none;", id: "file"
+        .field
           Shop name：
           = form.text_field :shop_name, placeholder: :お店の名前, class: "input-default"
-        .field
-          Food image：
-          = form.file_field :food_image,id: :image_field,class:"image-field"
-          .prev
-          - if @post.food_image.present?
-            = image_tag @post.food_image, id: :img_prev,class:"image-prev"
-          - else
-            = image_tag "noimage.png", id: :img_prev,class:"image-prev"
+
         .field
           = form.label :description
           = form.text_field :description, placeholder: :メニュー説明, class: "text-area"
         .field
           = form.label :address
           = form.text_field :address, placeholder: :"住所  (例)東京都世田谷区", class: "address-area"
-  
-
-        -# .field
-        -#   Assortment：
-        -#   Asahi
-        -#   = form.check_box  :assortment, {multiple: true}, 'Asahi', nil
-        -#   KIRIN
-        -#   = form.check_box  :assortment, {multiple: true}, 'KIRIN', nil
-        -#   SAPPORO
-        -#   = form.check_box  :assortment, {multiple: true}, 'SAPPORO', nil
-        -#   sunToRY
-        -#   = form.check_box  :assortment, {multiple: true}, 'sunToRY', nil
-        -#   YEBISU
-        -#   = form.check_box  :assortment, {multiple: true}, 'YEBISU', nil
-        -#   Others
-        -#   = form.check_box  :assortment, {multiple: true}, 'Others', nil
-        .tag
-          = form.label :Brands
-          = form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag|
-            .tagselect
-              = tag.label do
-                = tag.check_box
-                = tag.text
+        .field
+          .tag
+            = form.label :Brands
+            = form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag|
+              .tagselect
+                = tag.label do
+                  = tag.check_box
+                  = tag.text
 
           = form.submit 'form', class:"send__btn"
 
