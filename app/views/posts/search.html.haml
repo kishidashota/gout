@@ -7,15 +7,13 @@
         = button_tag type: 'submit' ,class: 'search_btn' do
           = icon 'fas','search',class: 'search-icon'
   .main__contents
-    .main__contents__list 
-      .posts
-        - @posts.each do |o|
-          =link_to post_path(o) do
-            .posts__image
-              = image_tag o.food_image.url,size:'200x200',class:"image"
-            .posts__content
-              .postt__content__name
-                =o.shop_name
+    - @posts.each do |o|
+      =link_to post_path(o) do
+        .posts__image
+          = image_tag o.food_image.url,size:'200x200',class:"image"
+        .posts__content
+          .postt__content__name
+            =o.shop_name
 
                   
     
