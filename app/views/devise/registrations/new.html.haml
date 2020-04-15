@@ -19,20 +19,17 @@
         .field
           = f.label :user_image
           %br/
-          %br/
-          #img_field{:onclick => "$('#file').click()"}
-            - if @user.user_image.url.present?
-              = image_tag(@user.user_image.url)
-            - else
-              %i.fas.fa-user.fa-5x{:style => "color: silver;"}
-          = f.file_field :user_image, class: "image", style: "display:none;", id: "file"
-
+          = f.file_field :user_image,id: :image_field,class:"image-field"
+        - if @user.user_image.present?
+          = image_tag @user.user_image, id: :img_prev,class:"image-prev"
+        - else
+          = image_tag "nouserimage.png", id: :img_prev,class:"image-prev"
           %br/
           %br/
         .field
           = f.label :"love_brand"
           %br/
-          = f.select :love_brand, [["Asahi", 1], ["KIRIN", 2], ["SAPPORO", 3], ["sunToRY", 4], ["YEBISU", 5],["クラフトビール", 6]]
+          = f.select :love_brand, :name, User.love_brands.keys.to_a, include_blank: true
           %br/
           %br/
         .field
