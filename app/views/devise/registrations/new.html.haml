@@ -16,20 +16,18 @@
           = f.email_field :email, autofocus: true, autocomplete: "email",class:"input-default"
           %br/
           %br/
-        .field
-          = f.label :user_image
-          %br/
-          = f.file_field :user_image,id: :image_field,class:"image-field"
-        - if @user.user_image.present?
-          = image_tag @user.user_image, id: :img_prev,class:"image-prev"
-        - else
-          = image_tag "nouserimage.png", id: :img_prev,class:"image-prev"
+          #img_field{:onclick => "$('#file').click()"}
+            - if @user.user_image.url.present?
+              = image_tag(@user.user_image.url)
+            - else
+              %i.fas.fa-user.fa-5x{:style => "color: silver;"}
+          = f.file_field :user_image, class: "image", style: "display:none;", id: "file"
           %br/
           %br/
         .field
           = f.label :"love_brand"
           %br/
-          = f.select :love_brand, :name, User.love_brands.keys.to_a, include_blank: true
+          = f.select :love_brand, :name, User.love_brands.keys.to_a,{include_blank: '---'}
           %br/
           %br/
         .field
