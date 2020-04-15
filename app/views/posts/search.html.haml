@@ -6,6 +6,7 @@
         = form.text_field :keyword, placeholder: "店名で検索できます", class: "search-input"
         = button_tag type: 'submit' ,class: 'search_btn' do
           = icon 'fas','search',class: 'search-icon'
+  .partition
   .main__contents
     - @posts.each do |o|
       =link_to post_path(o) do
@@ -14,8 +15,7 @@
         .posts__content
           .post__content__name
             =o.shop_name
-          .post__user__name
-            =o.user.user_name
+
 
 
                   

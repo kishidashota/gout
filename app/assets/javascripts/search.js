@@ -18,11 +18,6 @@ $(document).on('turbolinks:load', function() {
                       <div class="post__content__name">
                       ${post.shop_name}
                       </div>
-                      <ul class="food">
-                        <li>
-                        ${post.user_name}
-                        </li>
-                      </ul>
                     </div>
       `
     search_list.append(html);

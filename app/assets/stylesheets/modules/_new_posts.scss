@@ -91,7 +91,7 @@ input{
     
       }
       .input-default{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: initial;
         width: 15rem;
         height: 30px;
         color: #000;
@@ -108,7 +108,7 @@ input{
         
       }
       .text-area{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: initial;
         width: 300px;
         height: 60px;
         color: #000;
@@ -124,7 +124,7 @@ input{
         padding-left: 5px;
       }
       .address-area{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: initial;
         width: 300px;
         height: 30px;
         color: #000;

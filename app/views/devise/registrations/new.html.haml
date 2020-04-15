@@ -27,7 +27,7 @@
         .field
           = f.label :"love_brand"
           %br/
-          = f.select :love_brand, :name, User.love_brands.keys.to_a,{include_blank: '---'}
+          = f.select :love_brand, [["アサヒ","アサヒ" ],["キリン","キリン" ],["サッポロ","サッポロ"],["サントリー","サントリー"],["エビス","エビス"],["オリオン","オリオン"],["クラフト","クラフト"],["その他","その他"]]
           %br/
           %br/
         .field
