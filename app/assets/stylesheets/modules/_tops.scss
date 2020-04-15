@@ -175,7 +175,6 @@
       text-align:center;
       margin-top: 20px;
       color:#111111;
-
       &__select-box{
       margin-right: 30px;
       font-size: 15px;
@@ -191,7 +190,6 @@
     }
     &__contents{
       color: #151515;
-      
       display: flex;
       width: 1040px;
       display: inline-block;
@@ -201,8 +199,11 @@
       flex-wrap: wrap;
       background-color:white;
       margin: 0 auto;
-
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      .user__content{
+        text-align: center;
+      }
+
       .tags{
         display: flex;
         height: 65px;
@@ -225,6 +226,7 @@
           border-radius: 4px;
           margin: 1px;
         }
+      
       
  
       }

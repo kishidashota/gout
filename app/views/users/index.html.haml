@@ -1,8 +1,20 @@
 = render "shared/header"
 = render "shared/main"
-%h1 ユーザー一覧
-- @users.each do |user|
-  %a{:href => "/users/#{user.id}"}= image_tag user.user_image.url,size:'200x200',class:"image"
+.main
+  .main__title
+    All users
+  .partition
+  .main__contents
+    - @users.each do |user|
+      = link_to user_path(user) do
+        = image_tag user.user_image.url,size:'200x200',class:"image"
+        .user__content
+          .name
+            = user.user_name
+          .contents
+            = icon('fas','pen')
+            = user.posts.count
+            = icon('fas','beer')
+            = user.love_brand
 
-  %hr/
-= link_to "ホームへ戻る", posts_path
+
