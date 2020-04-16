@@ -11,7 +11,7 @@
             - if @post.food_image.url.present?
               = image_tag(@user.food_image.url)
             - else
-              %i.fas.fa-folder-plus.fa-7x.fa-border{:style => "color: gray;"}
+              %i.fas.fa-folder-plus.fa-7x.fa-border{:style => "color: #a7a7a7;"}
           = form.file_field :food_image, class: "image", style: "display:none;", id: "file"
         .field
           Shop name：
