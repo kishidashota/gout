@@ -1,6 +1,10 @@
 class Post < ApplicationRecord
   mount_uploader :food_image, FoodImageUploader
-  validates :shop_name, :description ,:address,:food_image, presence: true
+  validates :shop_name,
+            :description,
+            :address,
+            :food_image,
+            :tag_ids, presence:true
   has_many :comments
   belongs_to :user
   has_many :likes
@@ -10,6 +14,7 @@ class Post < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode
+  
 
   def self.search(search)
     if search

@@ -16,6 +16,9 @@
           = f.email_field :email, autofocus: true, autocomplete: "email",class:"input-default"
           %br/
           %br/
+          = f.label :user_image
+          %br/
+          %br/
           #img_field{:onclick => "$('#file').click()"}
             - if @user.user_image.url.present?
               = image_tag(@user.user_image.url)

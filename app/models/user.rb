@@ -6,7 +6,7 @@ class User < ApplicationRecord
     has_many :comments
     has_many :likes, dependent: :destroy
     has_many :liked_posts, through: :likes, source: :post
-    validates :user_name, presence: true
+    validates :user_name, presence: true,length: { maximum: 6} 
     validates :user_image, presence: true
     validates :love_brand, presence: true 
     def already_liked?(post)
