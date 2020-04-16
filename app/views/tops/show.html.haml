@@ -1,42 +1,66 @@
 = render "shared/header"
 .wrapper
-
   .descr
     = icon('fas','question-circle')
     Goutとは
     .descr-contents
-      居酒屋の投稿アプリです。
+      ビール好きのための居酒屋投稿アプリです。
+    .descr-contents
       %span{:style => "color: darkorange"}
         = icon('fas','bahai')
         お店ごとのビールの銘柄を確認できます。
   .down
     = icon('fas','angle-double-down fa-3x')
   .descr
-    おすすめの飲み屋を投稿するアプリです
+    ・飲み屋のビール銘柄とおすすめメニューを投稿するアプリです
     %br/
     %br/
     .img
       = image_tag("紹介1.jpg")
   .descr
-    投稿はビールの銘柄で絞り込めます
+    ・投稿はビールの銘柄で絞り込めます
     %br/
     %br/
     .img
       = image_tag("紹介5.png")
   .descr
-    右上のハンバーガメニューから、好きなページに飛べます。
+    ・お店の名前から検索もできます
+    %br/
+    %br/
+    .img
+      = image_tag("説明8.png")
+  .descr
+    ・右上のハンバーガメニューから、好きなページに飛べます。
     %br/
     %br/
     .img2
       = image_tag("説明.png")
   .descr
-    投稿に対してコメント、いいねが行えます。
+    ・投稿に対して他のユーザーがコメント、いいねを行えます。
     %br/
     %br/
     .img
-      = image_tag("説明３.png")
+      = image_tag("説明7.png")
   .descr
-    お店の名前から検索もできます
+    ・自分がした投稿といいねした投稿をプロフィールで確認できます。
+    %br/
+    %br/
+    .img
+      = image_tag("説明9.jpg")
+    %br/
+    %br/
+  .descr
+    是非ご利用くださいませ!!
+  .down
+    = icon('fas','angle-double-down fa-3x')
+  .start
+    = link_to new_user_session_path do
+      始める
+
+
+
+
+
   
 
 

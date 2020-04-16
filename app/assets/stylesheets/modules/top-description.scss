@@ -30,4 +30,26 @@
   .down{
     text-align: center;
   }
+  a{
+    text-decoration: none;
+  }
+  .start{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 150px;
+    line-height: 50px;
+    border: 1px solid #000 !important;
+    border-radius: 30px; 
+    opacity: 0.8;
+    background-color:rgb(26, 25, 24);  
+    margin-bottom: 130px;
+    
+  }
+  .start:hover {
+    background-color: #6b6b67;
+    transition: 0.7s ;
+    }
 }
