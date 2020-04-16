@@ -21,7 +21,7 @@ end
       redirect_to root_path, notice: "投稿に成功しました"
     else
       flash[:alert] = "入力内容に誤りがあります。入力漏れをご確認ください。"
-      render :new
+      redirect_to new_post_path
     end
   end
 

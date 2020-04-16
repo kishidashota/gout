@@ -21,19 +21,20 @@
           margin-top: 30px;
           .search-input{
             font-family: initial;
-            padding-left: 20px;
-            padding-right: 20px;
-            border: none;
-            width: 400px;
-           height: 40px;
-           border-bottom: 1px solid#dee2e6!important;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    width: 400px;
+    height: 37px;
+    border-bottom: 1px solid #dee2e6
 
           }
          .search_btn{
-           cursor: pointer;
-           width: 33px;
-           height: 33px;
-           background-color: #cecdcd;
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          background-color: #cecdcd;
            .search-icon{
              color: white;
              font-size: 20px;
@@ -285,10 +286,8 @@
             margin-bottom: 2rem;
             margin-top: 0px;
           }
-        
-      
     }
-    
+ 
 
 
 
