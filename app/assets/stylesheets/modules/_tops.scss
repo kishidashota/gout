@@ -318,6 +318,28 @@
       margin-top: 5px;
     }
   }
+  .exhibition:hover
+{
+  animation: big 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.exhibition:active
+{
+  animation: small 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes big 
+{
+  0% {transform: scale(1); }
+  100% {transform: scale(1.1);}
+}
+
+@keyframes small 
+{
+  100% {transform: scale(0.9);}
+}
   a{
     color: white;
   }
