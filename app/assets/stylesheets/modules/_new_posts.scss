@@ -4,6 +4,7 @@
     border: solid solid #151515;
     border-width: 1px;
     margin-right:50px ;
+   
     padding-top:20px ;
     height: 900px;
     background-color: white;
@@ -68,21 +69,26 @@ input{
       width: 536px;
       text-align: left;
       margin: auto;
+  
       .field{
         margin-top:20px ;
-        
-      }
-      .field{
+        #image-field{
+          margin-left: 6.5rem;
+        }
         #img_field{
           cursor: pointer;
+          img{
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            margin-left: 6.25rem;
+            box-shadow: 0px 0px 10px;
+          }
 
         }
  
 
-        .image-field{
-          margin-left: 0.5rem;
-        
-      }
+
       .image-prev{
         width: 250px;
         height: 250px;
@@ -91,9 +97,12 @@ input{
         border: solid 5px darkgray;
         
       }
-   
+      .tags{
+        margin-left: 6.25rem;
+      }
     
       }
+     
       .input-default{
         font-family: initial;
         width: 15rem;
@@ -162,6 +171,8 @@ input{
         text-decoration: none;
         line-height: 1;
         font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
       }
     }
   }
