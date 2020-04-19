@@ -93,13 +93,9 @@
   .tab_item:hover {
   opacity: 0.75;
   }
-  
-  /*ラジオボタンを全て消す*/
   input[name="tab_item"] {
   display: none;
   }
-  
-  /*タブ切り替えの中身のスタイル*/
   .tab_content {
   display: none;
   padding: 40px 40px 0; 
@@ -152,16 +148,11 @@
       }
   }
   }
-  
-  
-  /*選択されているタブのコンテンツのみを表示*/
   #all:checked ~ #all_content,
   #programming:checked ~ #programming_content,
   #design:checked ~ #design_content {
   display: block;
   }
-  
-  /*選択されているタブのスタイルを変える*/
   .tabs input:checked + .tab_item {
   background-color: rgba(255, 187, 0, 0.925);
   color: #fff;

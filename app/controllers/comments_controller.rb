@@ -6,8 +6,6 @@ class CommentsController < ApplicationController
       format.json
     end  
   end
-  # ローカル変数commentは、スコープの関係でこの後のjbuilder側で使用できないので、インスタンス変数@commentに編集します。
-
   private
   def comment_params
     params.require(:comment).permit(:content).merge(user_id: current_user.id, post_id: params[:post_id])

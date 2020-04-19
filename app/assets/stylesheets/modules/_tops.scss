@@ -63,7 +63,6 @@
           padding-bottom: 2rem;
           margin-bottom: 2rem;
           margin-top: 0px;
-
           }
         .img{
           width: 80px;
@@ -72,7 +71,6 @@
           margin-left:80px;
           margin-top: 30px;
           border: 1px solid  #6e6e73;
-
           }
           .name{
             color: #6e6e73;
@@ -82,46 +80,23 @@
           }
         background-color: white;
         color: #6e6e73;
-        /*メニュー背景色*/
         box-sizing: border-box;
         height: 100%;
         padding: 10px 40px;
-      
-        /*メニュー内部上下左右余白*/
         position: fixed;
         right: -300px;
-      
-        /*メニュー横幅①と合わせる*/
         top: 0;
         transition: transform 0.3s linear 0s;
-      
-        /*0.3s は変化するのにかかる時間*/
         width: 300px;
-      
-        /*メニュー横幅①*/
         z-index: 1000;
-      
         &::before {
-      
-      
-          /*ボタン部分背景色*/
           border-radius: 0 0 0 10px;
-      
-          /*左下角丸*/
           color: #c0c0c0;
-      
-          /*アイコン（フォント）色*/
           content: "≡";
-      
-          /*メニューアイコン*/
           display: block;
           font-size: 50px;
-      
-          /*アイコン（フォント）サイズ*/
           height: 50px;
           line-height: 50px;
-      
-          /*縦位置中央化*/
           position: absolute;
           right: 100%;
           text-align: center;
@@ -131,15 +106,8 @@
           margin-right: 10px;
         }
       }
-      
-      /*メニューアイコン部分は疑似要素で*/
-      
-      /*透過背景部分*/
-      
       #menu-background {
         background-color: #333;
-      
-        /*黒背景部分背景色*/
         display: block;
         height: 100%;
         opacity: 0;
@@ -147,27 +115,18 @@
         right: 0;
         top: 0;
         transition: all 0.3s linear 0s;
-      
-        /*0.3s は変化するのにかかる時間*/
         width: 100%;
         z-index: -1;
       }
-      
-      /*hover 時の処理*/
-      
+
       #ham-menu:hover {
         transform: translate(-300px);
-      
-        /*メニュー横幅①と合わせる*/
-      
+ 
         + #menu-background {
           opacity: 0.5;
-      
-          /*黒背景部分透過度*/
           z-index: 999;
         }
       }
-
     }
   }
   .main{
@@ -186,7 +145,6 @@
       &__select-box{
       margin-right: 30px;
       font-size: 15px;
-     
       }
     }
     .partition{
@@ -211,7 +169,6 @@
       .user__content{
         text-align: center;
       }
-
       .tags{
         display: flex;
         height: 65px;
@@ -220,8 +177,6 @@
         width: 210px;
         flex-wrap: wrap;
         margin-top:1rem ;
-
-   
         .tag{
           background-color: black;
           color: lightyellow;
@@ -233,11 +188,7 @@
           border-radius: 4px;
           margin: 1px;
         }
-      
-      
- 
       }
-        
         a{
           text-decoration: none;
           color: black;
@@ -276,19 +227,13 @@
               border-radius: 50%;
               margin: 0 auto;
               }
-  
               .name{
                 font-size: 10px;
                 margin: 0 auto;
                 text-align: center;
                 text-decoration: none;
               }
-      
-              
             }
-            
-      
-          
           }
           .partition{
             border-bottom: 1px solid#dee2e6!important;

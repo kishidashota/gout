@@ -2,7 +2,6 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(comment){
     var html = `
-                  
                     <div class="data">
                       <div class="icon">
                         <div class="image">
@@ -18,9 +17,6 @@ $(document).on('turbolinks:load', function() {
                         </div>
                     </div>
                   <div class="partition"></div>`
-
-  
-
     return html;
   }
   $('#new_comment').on('submit', function(e){

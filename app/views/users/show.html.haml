@@ -29,22 +29,6 @@
         .personal__title__select-box
     #programming_content.tab_content
       .tab_content_description
-        -# - @user.posts.each do |post|
-        -#   %a{:href => "/posts/#{post.id}"}= post.shop_name
-        -#   .assortment
-        -#     = post.assortment[1..-2].gsub('",',', ').gsub("\"", "")
-        -#   = image_tag post.food_image.url,size:'200x200',class:"image"
-        -#   .posts__content
-        -#     .by
-        -#       by
-        -#     .icon
-        -#       .img
-        -#         = image_tag post.user.user_image.url,size:'30x30',class:"img"
-        -#       .name
-        -#         = post.user.user_name
-        -#       .likes
-        -#         = post.liked_users.count
-
         - @user.liked_posts.each do |post|
           =link_to "#" do
             = image_tag post.food_image.url,size:'200x200',class:"image"
