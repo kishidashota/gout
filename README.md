@@ -11,7 +11,6 @@
   ログインページ下部のオレンジ色のボタンを押していただくと、テストユーザーとして簡単ログインが行えます。
   プロフィール編集機能以外は全ての機能がご利用いただけます。
 ## 機能一覧
-トップページ(ログイン後)
 <img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px">
 <img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="250px">
 <img src="https://github.com/kishidashota/gout/blob/master/rea3.png" width="250px">
