@@ -6,7 +6,7 @@
   background-color: white;
   margin: 0 auto;
   margin-bottom: 50px;
-  &__title{
+  .data{
     display: flex;
     .icon{
       width: 25px;
@@ -16,13 +16,19 @@
           height: 25px;
           border-radius: 50%;
           background-color: red;
-          margin-left: 10px;
           margin-top: 5px;
       }
       .name{
         font-size: 10px;
         margin: 0 auto;
-        
+        text-align: center;
+        a{
+          color: #0066c0;
+
+        }
+        a:hover{
+          color:orange;
+        }
       
 
       }

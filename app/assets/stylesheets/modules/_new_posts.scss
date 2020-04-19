@@ -28,11 +28,14 @@
     .like{
       font-size: 15px;
       margin-left: 12px;
+      cursor: pointer;
+      
 .heart{
   &:before{
     content: "\f004";
     display: block;
     margin-bottom: -20px;
+    cursor: pointer;
   }
   }
 
@@ -42,6 +45,7 @@ input{
   height: 60px;
   border: none;
   margin-top: -35px;
+  cursor: pointer;
 }
 .heart2{
   &:before{

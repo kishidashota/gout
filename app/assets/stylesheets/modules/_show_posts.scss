@@ -92,18 +92,23 @@
         }
         a:hover{
           color:darkorange;
-
         }
         .name{
+          a{
+            color: #0066c0;
+  
+          }
+          a:hover{
+            color:darkorange;
+          }
           line-height: 64px;
           margin: 0 auto;
           text-align: center;
           font-weight: bold;
           font-size: 15px;
           margin-left: 10px;
-          color: #0066c0;
-
         }
+        
         .shopname{
           line-height: 64px;
           margin: 0 auto;
