@@ -27,9 +27,9 @@
   ページネーション 
   アラート機能
 ## 使用画面サンプル
-- mmm
-<img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px">
-<img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="250px">
+- トップページ(ログイン後)
+<img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px"> <img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="250px">
+
 <img src="https://github.com/kishidashota/gout/blob/master/rea3.png" width="250px">
 <img src="https://github.com/kishidashota/gout/blob/master/rea4.png" width="250px">
 <img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="250px">
