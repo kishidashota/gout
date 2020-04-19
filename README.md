@@ -13,6 +13,11 @@
 ## 機能一覧
 トップページ(ログイン後)
 <img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea3.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea4.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea6.png" width="250px">
 
 ### ユーザー関連
   アカウント作成・編集機能(登録時に選択した画像を表示/js)
