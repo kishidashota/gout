@@ -27,7 +27,7 @@
   ページネーション 
   アラート機能
 ## 使用画面サンプル
-- トップページ(ログイン後)
+・トップページ(ログイン後)
 <img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px">
 ・新規投稿画面
 <img src="https://github.com/kishidashota/gout/blob/master/rea3.png" width="600px">
