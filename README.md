@@ -30,11 +30,11 @@
 - トップページ(ログイン後)
 <img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px">
 ・新規投稿画面
-<img src="https://github.com/kishidashota/gout/blob/master/rea3.png" width="600px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="600px">
 ・マイページ
-<img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="600px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea4.png" width="600px">
 ・投稿詳細画面
-<img src="https://github.com/kishidashota/gout/blob/master/rea6.png" width="600px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="600px">
 
 
 ## 使用技術
