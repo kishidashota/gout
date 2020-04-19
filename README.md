@@ -34,7 +34,7 @@
 - マイページ
 <img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="600px">
 - 投稿詳細画面
-<img src="https://github.com/kishidashota/gout/blob/master/rea6.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea6.png" width="600px">
 
 
 ## 使用技術
