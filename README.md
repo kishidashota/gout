@@ -40,21 +40,30 @@
 ## 使用技術
 ### バックエンド
  Ruby 2.5.1
+
  Rails 5.2.4.2
+
  MySQL 5.6.46
 ### フロントエンド
   haml
+
   sass
+
   JavaScript
+
   JQuery
 ### インフラストラクチャー
 ### 開発環境
 Docker 19.03.8
+
 docker-compose  1.25.4
 ### AWS
 EC2
+
 S3
+
 IAM
+
 Nginx, unicorn
 
 ## 今後の改善点
