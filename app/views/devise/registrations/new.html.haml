@@ -8,12 +8,12 @@
         .field
           = f.label :user_name
           %br/
-          = f.text_field :user_name,class:"input-default"
+          = f.text_field :user_name,class:"input-default",placeholder:"6文字以下"
           %br/
         .field
           = f.label :email
           %br/
-          = f.email_field :email, autofocus: true, autocomplete: "email",class:"input-default"
+          = f.email_field :email, autofocus: true, autocomplete: "email",class:"input-default",placeholder:"(例) example@gmail.com"
           %br/
           %br/
         .field 
@@ -37,14 +37,12 @@
         .field
           = f.label :password
           - if @minimum_password_length
-            %em
-              (#{@minimum_password_length} characters minimum)
-          %br/
-          = f.password_field :password, autocomplete: "new-password",class:"input-default"
+            %br/
+          = f.password_field :password, autocomplete: "new-password",class:"input-default",placeholder:"6文字以上"
         .field
           = f.label :password_confirmation
           %br/
-          = f.password_field :password_confirmation, autocomplete: "new-password",class:"input-default"
+          = f.password_field :password_confirmation, autocomplete: "new-password",class:"input-default",placeholder:"6文字以上"
         .actions
           = f.submit "Sign up",class:"send__btn"
       = render "devise/shared/links"

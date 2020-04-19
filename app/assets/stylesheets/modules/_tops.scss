@@ -14,6 +14,9 @@
         color:yellow;
         text-decoration: none;
       }
+      a:hover{
+        color: white;
+      }
     }
     &__search{
       margin-left:300px;
@@ -50,6 +53,9 @@
         a{
           color: #6e6e73;
           text-decoration: none;
+        }
+        a:hover{
+          color: darkorange;
         }
         .partition{
           border-bottom: 1px solid#dee2e6!important;
@@ -209,7 +215,6 @@
       .tags{
         display: flex;
         height: 65px;
-    
         margin-top: 1rem;
         margin: 0 auto;
         width: 210px;
@@ -248,6 +253,11 @@
           width: 200px;
           height: 200px;
           }
+     
+          .image:hover {
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+          }
          
           .posts__content{
             margin-left: 4.7rem;
@@ -266,13 +276,20 @@
               border-radius: 50%;
               margin: 0 auto;
               }
+              .img:hover{
+                transform: scale(1.05);
+                transition-duration: 0.5s;
+              }
               .name{
                 font-size: 10px;
                 margin: 0 auto;
                 text-align: center;
-
+                text-decoration: none;
+                color: #0066c0;
               }
-              
+              .name:hover{
+                color:darkorange;
+              }
               
             }
             
@@ -320,13 +337,13 @@
   }
   .exhibition:hover
 {
-  animation: big 0.1s;
+  animation: big 0.4s;
   animation-fill-mode: forwards;
 }
 
 .exhibition:active
 {
-  animation: small 0.1s;
+  animation: small 0.4s;
   animation-fill-mode: forwards;
 }
 
