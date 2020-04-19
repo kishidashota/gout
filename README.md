@@ -11,13 +11,6 @@
   ログインページ下部のオレンジ色のボタンを押していただくと、テストユーザーとして簡単ログインが行えます。
   プロフィール編集機能以外は全ての機能がご利用いただけます。
 ## 機能一覧
-<img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px">
-<img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="250px">
-<img src="https://github.com/kishidashota/gout/blob/master/rea3.png" width="250px">
-<img src="https://github.com/kishidashota/gout/blob/master/rea4.png" width="250px">
-<img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="250px">
-<img src="https://github.com/kishidashota/gout/blob/master/rea6.png" width="250px">
-
 ### ユーザー関連
   アカウント作成・編集機能(登録時に選択した画像を表示/js)
   ログイン・ログアウト機能
@@ -33,6 +26,14 @@
   マップ表示(Google Maps API)
   ページネーション 
   アラート機能
+## 使用画面サンプル
+- mmm
+<img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea3.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea4.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="250px">
+<img src="https://github.com/kishidashota/gout/blob/master/rea6.png" width="250px">
 
 ## 使用技術
 ### バックエンド
