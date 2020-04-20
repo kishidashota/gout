@@ -29,53 +29,42 @@
     - アラート機能
 ## 使用画面サンプル
 - トップページ(ログイン後)
-<img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="600px">
-・新規投稿画面
-<img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="600px">
-・マイページ
-<img src="https://github.com/kishidashota/gout/blob/master/rea4.png" width="600px">
-・投稿詳細画面
-<img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="600px">
+    - <img src="https://github.com/kishidashota/gout/blob/master/rea1.png" width="600px">
+
+- 新規投稿画面
+    - <img src="https://github.com/kishidashota/gout/blob/master/rea2.png" width="600px">
+- マイページ
+    - <img src="https://github.com/kishidashota/gout/blob/master/rea4.png" width="600px">
+- 投稿詳細画面
+    - <img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="600px">
 
 
 ## 使用技術
-### バックエンド
- Ruby 2.5.1
-
- Rails 5.2.4.2
-
- MySQL 5.6.46
-### フロントエンド
-  haml
-
-  sc
-  ss
-
-  JavaScript
-
-  JQuery
-### インフラストラクチャー
-### 開発環境
-Docker 19.03.8
-
-docker-compose  1.25.4
-
-RSpec
-### AWS
-EC2
-
-S3
-
-IAM
-
-Nginx, unicorn
-
-
+- バックエンド
+    - Ruby 2.5.1
+    - Rails 5.2.4.2
+    - MySQL 5.6.46
+- フロントエンド
+    - haml
+    - scss
+    - JavaScript
+    - JQuery
+- インフラストラクチャー
+    - 開発環境
+        - Docker 19.03.8
+        - docker-compose  1.25.4
+        - RSpec
+    - AWS
+        - EC2
+        - S3
+        - IAM
+        - Nginx, unicorn
 ## 工夫した点
-・ユーザーが任意の銘柄を一瞬で選択できる様に、セレクトタグによる検索を可能にしたこと。
+- ユーザーが任意の銘柄を一瞬で選択できる様に、セレクトタグによる検索を可能にしたこと。
+
 ## 今後の改善点
-・本番にDockerを導入できていないこと。 (Amazon Linux 2 AMIを使用していなかった為)
+- 本番にDockerを導入できていないこと。 (Amazon Linux 2 AMIを使用していなかった為)
 
 ➡︎ 今後のインフラ構築の際はカリキュラムで学んだ以外のAWSのサービス概要を事前に把握して、VPC, Route 53, ALB, ACM, RDSといったAWSの主要サービスを理解しつつ。その他のインフラの知見も深めていきたいです。
 
-・マップ表示(Google Maps API)のGoogle_API_keyがどうしても取得できないエラーが出てしまうので、丸二日かけたが、解決しなかった。時間がある時に内容理解も含めて解決させたいです。
+- マップ表示(Google Maps API)のGoogle_API_keyがどうしても取得できないエラーが出てしまうので、丸二日かけたが、解決しなかった。時間がある時に内容理解も含めて解決させたいです。
