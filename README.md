@@ -47,7 +47,7 @@
 ### フロントエンド
   haml
 
-  sass
+  scss
 
   JavaScript
 
