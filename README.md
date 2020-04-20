@@ -69,6 +69,8 @@
 Docker 19.03.8
 
 docker-compose  1.25.4
+
+RSpec
 ### AWS
 EC2
 
