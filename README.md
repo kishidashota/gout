@@ -38,9 +38,9 @@
 - 投稿詳細画面
     - <img src="https://github.com/kishidashota/gout/blob/master/rea5.png" width="600px">
 - セレクトタグ検索
-    - ![demo](https://i.gyazo.com/a833290a985fda4e863d1c3323f09d6e.mp4)
+    - ![Gif](https://i.gyazo.com/a833290a985fda4e863d1c3323f09d6e.mp4)
 - インクリメンタルサーチ
-    - ![demo](https://i.gyazo.com/a816b4689f609e79f9d864114059b789.mp4)
+    - ![Gif](https://i.gyazo.com/a816b4689f609e79f9d864114059b789.mp4)
 
 
 ## 使用技術
