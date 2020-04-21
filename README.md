@@ -40,8 +40,7 @@
 - セレクトタグ検索
     - https://i.gyazo.com/a816b4689f609e79f9d864114059b789.mp4
 - インクリメンタルサーチ
-    - ![Demo](https://i.gyazo.com/a816b4689f609e79f9d864114059b789.mp4)
-
+    - https://i.gyazo.com/a833290a985fda4e863d1c3323f09d6e.mp4
 
 ## 使用技術
 - バックエンド
